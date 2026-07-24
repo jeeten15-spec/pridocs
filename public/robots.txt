@@ -1,0 +1,13 @@
+# Pridocs.org Robots.txt - Optimized for Launch Day
+User-agent: *
+Allow: /
+Allow: /blog/
+Allow: /about
+
+# Disallow system configurations and asset folders to optimize crawl budget
+Disallow: /cdn-cgi/
+Disallow: /build/
+Disallow: /_cloudflare/
+
+# Direct crawlers to the sitemap
+Sitemap: https://pridocs.org/sitemap.xml
