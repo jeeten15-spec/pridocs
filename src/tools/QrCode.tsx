@@ -1,16 +1,22 @@
 import { useState } from 'react'
-import { QrCode, Download, Copy } from 'lucide-react'
+import { QrCode, Download, Copy, Check } from 'lucide-react'
+import QRCode from 'qrcode'
 
 export default function QrCodeTool() {
   const [text, setText] = useState('')
   const [qrUrl, setQrUrl] = useState('')
+  const [copied, setCopied] = useState(false)
+  const [error, setError] = useState('')
 
   const generate = async () => {
     if (!text) return
-    // Simple QR generation using a public API for demo (in real app we'd use qrcode lib)
-    const encoded = encodeURIComponent(text)
-    const url = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encoded}`
-    setQrUrl(url)
+    setError('')
+    try {
+      const url = await QRCode.toDataURL(text, { width: 512, margin: 2 })
+      setQrUrl(url)
+    } catch (err: any) {
+      setError(err?.message || 'Could not generate QR code')
+    }
   }
 
   const download = () => {
@@ -22,15 +28,17 @@ export default function QrCodeTool() {
   }
 
   const copyText = () => {
-    navigator.clipboard.writeText(text)
-    alert('Text copied!')
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    })
   }
 
   return (
     <div className="max-w-md mx-auto px-4 py-10">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold text-slate-900 mb-2">QR Code Generator</h1>
-        <p className="text-slate-500">Generate QR codes instantly. 100% private.</p>
+        <p className="text-slate-500">Generate QR codes instantly. 100% private — generated locally, nothing sent anywhere.</p>
       </div>
 
       <div className="space-y-4">
@@ -49,15 +57,17 @@ export default function QrCodeTool() {
           <QrCode className="w-5 h-5" /> Generate QR Code
         </button>
 
+        {error && <p className="text-center text-sm text-red-600">{error}</p>}
+
         {qrUrl && (
           <div className="text-center space-y-4">
             <img src={qrUrl} alt="QR Code" className="mx-auto rounded-xl border border-slate-200" />
             <div className="flex gap-3 justify-center">
               <button onClick={download} className="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2">
-                <Download className="w-4 h-4" /> Open Your Document
+                <Download className="w-4 h-4" /> Open Your File
               </button>
               <button onClick={copyText} className="flex-1 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 flex items-center justify-center gap-2">
-                <Copy className="w-4 h-4" /> Copy Text
+                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />} {copied ? 'Copied' : 'Copy Text'}
               </button>
             </div>
           </div>
@@ -65,7 +75,7 @@ export default function QrCodeTool() {
       </div>
 
       <div className="mt-8 text-center text-xs text-slate-500">
-        Generated locally in your browser.
+        Generated entirely on your device using the open-source <code>qrcode</code> library — your text is never sent to any server.
       </div>
     </div>
   )

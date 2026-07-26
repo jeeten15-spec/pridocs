@@ -12,9 +12,15 @@ const FORMATS = [
   { id: 'flac', label: 'FLAC', mime: 'audio/flac', ext: '.flac', args: ['-c:a', 'flac'] },
 ]
 
-export default function AudioConverter() {
+interface AudioConverterProps {
+  embedded?: boolean
+  /** Pre-select the output format id (see FORMATS above) on format-specific landing pages. */
+  defaultFormat?: string
+}
+
+export default function AudioConverter({ embedded = false, defaultFormat = 'mp3' }: AudioConverterProps) {
   const [file, setFile] = useState<File | null>(null)
-  const [format, setFormat] = useState('mp3')
+  const [format, setFormat] = useState(defaultFormat)
   const [busy, setBusy] = useState(false)
   const [status, setStatus] = useState('')
   const [result, setResult] = useState<string | null>(null)
@@ -58,10 +64,12 @@ export default function AudioConverter() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">Audio Converter</h1>
-        <p className="text-slate-500 dark:text-slate-400">Convert WAV, MP3, AAC, OGG, FLAC and more — entirely in your browser.</p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">Audio Converter</h1>
+          <p className="text-slate-500 dark:text-slate-400">Convert WAV, MP3, AAC, OGG, FLAC and more — entirely in your browser.</p>
+        </div>
+      )}
 
       <div className="mb-4">
         <label className="block text-sm font-medium mb-1">Output format</label>

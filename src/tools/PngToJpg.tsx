@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Download, Upload, Loader2 } from 'lucide-react'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function PngToJpg() {
+export default function PngToJpg({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [result, setResult] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -47,10 +47,12 @@ export default function PngToJpg() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-10">
-        <h1 className="text-3xl font-semibold text-slate-900 mb-3">Secure PNG to JPG Converter</h1>
-        <p className="text-slate-500 max-w-xl mx-auto">Turn bulky PNGs into lightweight JPGs while preserving visual quality. Runs entirely in your browser.</p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-10">
+          <h1 className="text-3xl font-semibold text-slate-900 mb-3">Secure PNG to JPG Converter</h1>
+          <p className="text-slate-500 max-w-xl mx-auto">Turn bulky PNGs into lightweight JPGs while preserving visual quality. Runs entirely in your browser.</p>
+        </div>
+      )}
 
       <div className="mb-6 p-4 rounded-xl bg-white border border-slate-200">
         <label className="block text-sm font-medium mb-2">Quality: {Math.round(quality * 100)}%</label>

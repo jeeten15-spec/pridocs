@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, useSearchParams, Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import Fuse from 'fuse.js'
 import { tools, popularTools } from '../data/tools'
@@ -20,6 +20,19 @@ export default function Landing() {
   const [showResults, setShowResults] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+
+  // Supports landing here from a search engine's "sitelinks search box"
+  // (e.g. https://pridocs.org/?q=pdf+to+jpg) — see the SearchAction schema
+  // in index.html. Pre-fills the query so the same fuzzy search runs.
+  useEffect(() => {
+    const q = searchParams.get('q')
+    if (q) {
+      setQuery(q)
+      inputRef.current?.focus()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     if (query.trim().length < 1) {
@@ -68,7 +81,7 @@ export default function Landing() {
             <img 
               src="/logo.png" 
               alt="Pridocs Logo" 
-              className="w-20 h-20 mb-3 drop-shadow-xl" 
+              className="w-20 h-20 mb-3 rounded-full object-cover drop-shadow-xl" 
             />
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-[#0A2540] dark:text-slate-100 mb-2">
               PRIDOCS

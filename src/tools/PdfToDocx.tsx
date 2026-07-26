@@ -112,7 +112,7 @@ function createSimpleDocx(text: string): Blob {
   return createZip(zipParts)
 }
 
-export default function PdfToDocx() {
+export default function PdfToDocx({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [busy, setBusy] = useState(false)
   const [result, setResult] = useState<string | null>(null)
@@ -150,12 +150,14 @@ export default function PdfToDocx() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold text-slate-900 mb-3">PDF to DOCX Converter Online - Free & Private</h1>
-        <p className="text-slate-500 max-w-xl mx-auto">
-          Extract text from PDF and create an editable Word document entirely in your browser. Best for text-heavy PDFs. Complex layouts and images are not fully reconstructed.
-        </p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-semibold text-slate-900 mb-3">PDF to DOCX Converter Online - Free & Private</h1>
+          <p className="text-slate-500 max-w-xl mx-auto">
+            Extract text from PDF and create an editable Word document entirely in your browser. Best for text-heavy PDFs. Complex layouts and images are not fully reconstructed.
+          </p>
+        </div>
+      )}
 
       <label
         onDragOver={e => { e.preventDefault(); setDrag(true) }}

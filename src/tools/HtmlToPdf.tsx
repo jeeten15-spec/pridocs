@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FileText, Download, Loader2 } from 'lucide-react'
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib'
 
-export default function HtmlToPdf() {
+export default function HtmlToPdf({ embedded = false }: { embedded?: boolean }) {
   const [html, setHtml] = useState('<h1>Hello from Pridocs</h1>\n<p>This is a simple HTML to PDF converter that runs entirely in your browser.</p>')
   const [busy, setBusy] = useState(false)
   const [result, setResult] = useState<string | null>(null)
@@ -72,10 +72,12 @@ export default function HtmlToPdf() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold text-slate-900 mb-2">HTML to PDF</h1>
-        <p className="text-slate-500">Convert HTML content to a clean PDF. Text-focused (CSS layout limited in pure browser).</p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-semibold text-slate-900 mb-2">HTML to PDF</h1>
+          <p className="text-slate-500">Convert HTML content to a clean PDF. Text-focused (CSS layout limited in pure browser).</p>
+        </div>
+      )}
 
       <textarea
         value={html}

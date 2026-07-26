@@ -37,6 +37,31 @@
     <meta name="twitter:description" content="Convert files securely in your browser. Your data never leaves your device." />
     <meta name="twitter:image" content="https://pridocs.org/og-image.png" />
     <meta name="twitter:image:alt" content="Pridocs – Free, Secure & Ad-Free Document and Media Converter" />
+
+    <!--
+      Sitelinks Search Box: tells Google/Bing that pridocs.org has a working
+      on-site search, and how to construct a URL for a given query. Whether
+      it actually renders under our search result is entirely up to the
+      search engine (mainly shown for sites with meaningful branded search
+      volume) — this markup only makes it eligible.
+      https://developers.google.com/search/docs/appearance/structured-data/sitelinks-searchbox
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Pridocs",
+      "url": "https://pridocs.org/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://pridocs.org/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body class="bg-white text-slate-900 antialiased">
     <div id="root"></div>

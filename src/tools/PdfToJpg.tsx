@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Image, Download, Loader2, Upload } from 'lucide-react'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function PdfToJpg() {
+export default function PdfToJpg({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -52,10 +52,12 @@ export default function PdfToJpg() {
     <>
 
       <div className="max-w-3xl mx-auto px-4 py-10">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-semibold text-slate-900 mb-3">Free Online PDF to JPG Converter (100% Private)</h1>
-        <p className="text-slate-500 max-w-xl mx-auto">Need to convert PDF pages to high-quality JPG images without risking your data? Our private PDF converter processes everything directly in your browser. Perfect for sensitive documents, receipts, or portfolios.</p>
-        </div>
+        {!embedded && (
+          <div className="text-center mb-10">
+            <h1 className="text-3xl font-semibold text-slate-900 mb-3">Free Online PDF to JPG Converter (100% Private)</h1>
+            <p className="text-slate-500 max-w-xl mx-auto">Need to convert PDF pages to high-quality JPG images without risking your data? Our private PDF converter processes everything directly in your browser. Perfect for sensitive documents, receipts, or portfolios.</p>
+          </div>
+        )}
 
         <label
           onDragOver={(e) => { e.preventDefault(); setDrag(true) }}

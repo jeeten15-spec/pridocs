@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Download, Upload, Loader2 } from 'lucide-react'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function JpgToPng() {
+export default function JpgToPng({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [result, setResult] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -43,10 +43,12 @@ export default function JpgToPng() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-10">
-        <h1 className="text-3xl font-semibold text-slate-900 mb-3">Secure JPG to PNG Converter</h1>
-        <p className="text-slate-500 max-w-xl mx-auto">Convert JPG images to PNG with true alpha transparency support. Optimize your web assets locally with zero tracking.</p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-10">
+          <h1 className="text-3xl font-semibold text-slate-900 mb-3">Secure JPG to PNG Converter</h1>
+          <p className="text-slate-500 max-w-xl mx-auto">Convert JPG images to PNG with true alpha transparency support. Optimize your web assets locally with zero tracking.</p>
+        </div>
+      )}
 
       <label
         onDragOver={(e) => { e.preventDefault(); setDrag(true) }}

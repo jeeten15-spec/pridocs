@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Image, Download, Loader2, Upload } from 'lucide-react'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function PdfToPng() {
+export default function PdfToPng({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -50,10 +50,12 @@ export default function PdfToPng() {
     <>
 
       <div className="max-w-3xl mx-auto px-4 py-10">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-semibold text-slate-900 mb-3">Free Online PDF to PNG Converter (100% Private)</h1>
-        <p className="text-slate-500 max-w-xl mx-auto">Convert PDF pages to high-quality transparent PNG images entirely in your browser. Zero server uploads and zero file tracking.</p>
-        </div>
+        {!embedded && (
+          <div className="text-center mb-10">
+            <h1 className="text-3xl font-semibold text-slate-900 mb-3">Free Online PDF to PNG Converter (100% Private)</h1>
+            <p className="text-slate-500 max-w-xl mx-auto">Convert PDF pages to high-quality transparent PNG images entirely in your browser. Zero server uploads and zero file tracking.</p>
+          </div>
+        )}
 
         <label
           onDragOver={(e) => { e.preventDefault(); setDrag(true) }}

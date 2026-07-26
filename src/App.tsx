@@ -48,6 +48,14 @@ import HtmlToPdf from './tools/HtmlToPdf'
 import DocxToPdf from './tools/DocxToPdf'
 import PdfToDocx from './tools/PdfToDocx'
 import UnitConverter from './tools/UnitConverter'
+import WordDaily from './tools/WordDaily'
+import ImagesToPdf from './tools/ImagesToPdf'
+import BackgroundRemover from './tools/BackgroundRemover'
+import MemeGenerator from './tools/MemeGenerator'
+import ColorPalette from './tools/ColorPalette'
+import BarcodeGenerator from './tools/BarcodeGenerator'
+import TextToSpeech from './tools/TextToSpeech'
+import ImageToText from './tools/ImageToText'
 import AudioConverter from './tools/AudioConverter'
 import VideoToMp3 from './tools/VideoToMp3'
 import JsonXmlValidator from './tools/JsonXmlValidator'
@@ -57,6 +65,8 @@ import WordTools from './tools/WordTools'
 import PomodoroTimer from './tools/PomodoroTimer'
 import RandomList from './tools/RandomList'
 import CrosswordSolver from './tools/CrosswordSolver'
+import HeicToJpg from './tools/HeicToJpg'
+import ConvertLandingPage from './pages/ConvertLandingPage'
 
 
 export default function App() {
@@ -78,6 +88,9 @@ export default function App() {
       <Route path="/tools/compress-pdf" element={<ToolLayout><CompressPdf /></ToolLayout>} />
       <Route path="/tools/rotate-pdf" element={<ToolLayout><RotatePdf /></ToolLayout>} />
       <Route path="/tools/pdf-ocr" element={<ToolLayout><PdfOcr /></ToolLayout>} />
+      <Route path="/tools/images-to-pdf" element={<ToolLayout><ImagesToPdf /></ToolLayout>} />
+      <Route path="/tools/background-remover" element={<ToolLayout><BackgroundRemover /></ToolLayout>} />
+      <Route path="/tools/image-to-text" element={<ToolLayout><ImageToText /></ToolLayout>} />
       <Route path="/tools/sign-pdf" element={<ToolLayout><SignPdf /></ToolLayout>} />
       <Route path="/tools/crop-pdf" element={<ToolLayout><CropPdf /></ToolLayout>} />
       <Route path="/tools/redact-pdf" element={<ToolLayout><RedactPdf /></ToolLayout>} />
@@ -128,9 +141,18 @@ export default function App() {
       <Route path="/tools/text-case-counter" element={<ToolLayout><TextCaseCounter /></ToolLayout>} />
       <Route path="/tools/emi-calculator" element={<ToolLayout><EmiCalculator /></ToolLayout>} />
       <Route path="/tools/word-tools" element={<ToolLayout><WordTools /></ToolLayout>} />
+      <Route path="/tools/word-daily" element={<ToolLayout><WordDaily /></ToolLayout>} />
+      <Route path="/tools/meme-generator" element={<ToolLayout><MemeGenerator /></ToolLayout>} />
+      <Route path="/tools/color-palette" element={<ToolLayout><ColorPalette /></ToolLayout>} />
+      <Route path="/tools/barcode-generator" element={<ToolLayout><BarcodeGenerator /></ToolLayout>} />
+      <Route path="/tools/text-to-speech" element={<ToolLayout><TextToSpeech /></ToolLayout>} />
       <Route path="/tools/pomodoro" element={<ToolLayout><PomodoroTimer /></ToolLayout>} />
       <Route path="/tools/random-list" element={<ToolLayout><RandomList /></ToolLayout>} />
       <Route path="/tools/crossword-solver" element={<ToolLayout><CrosswordSolver /></ToolLayout>} />
+      <Route path="/tools/heic-to-jpg" element={<ToolLayout><HeicToJpg /></ToolLayout>} />
+
+      {/* Long-tail SEO landing pages (data-driven, see src/data/convertPages.ts) */}
+      <Route path="/convert/:slug" element={<ConvertLandingPage />} />
 
       <Route path="*" element={<Landing />} />
     </Routes>

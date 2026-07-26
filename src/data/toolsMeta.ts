@@ -186,9 +186,41 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     title: "Crossword Solver Online - Pattern Matcher | Pridocs",
     description: "Solve crossword clues with letter patterns. Runs offline in your browser."
   },
+  "meme-generator": {
+    title: "Free Meme Generator - No Watermark | Pridocs",
+    description: "Add captions to any image and export as PNG, entirely in your browser. Free, private, no watermark, no account."
+  },
+  "color-palette": {
+    title: "Color Palette Generator - From Photo or Color | Pridocs",
+    description: "Extract dominant colors from a photo or generate complementary, analogous and triadic color schemes from a base color. Runs entirely in your browser."
+  },
+  "barcode-generator": {
+    title: "Free Barcode Generator - CODE128, EAN-13, UPC | Pridocs",
+    description: "Generate CODE128, EAN-13, UPC and other barcode formats instantly, entirely on your device."
+  },
+  "text-to-speech": {
+    title: "Free Text to Speech Reader Online | Pridocs",
+    description: "Have any text read aloud using your device's own voices. Free, private, no account needed."
+  },
   "pomodoro": {
     title: "Pomodoro Timer Online - Free Focus Timer | Pridocs",
     description: "Simple Pomodoro focus and break timer. No account, fully private."
+  },
+  "background-remover": {
+    title: "Free AI Background Remover - Unlimited & Private | Pridocs",
+    description: "Remove the background from any photo using an on-device AI model — free, unlimited, no watermark, no account. Your photos never leave your device."
+  },
+  "images-to-pdf": {
+    title: "JPG & PNG to PDF Converter - Free & Private | Pridocs",
+    description: "Combine multiple photos into a single PDF document entirely in your browser. Free, ad-free, and your images never leave your device."
+  },
+  "image-to-text": {
+    title: "Image to Text Converter (Free OCR) - No Upload | Pridocs",
+    description: "Extract text from photos and screenshots using on-device OCR. Free, private and ad-free — your images never leave your device."
+  },
+  "word-daily": {
+    title: "Word Daily - Free Daily Word Puzzle Game | Pridocs",
+    description: "A new 5-letter word puzzle every day, free and ad-free. Guess in 6 tries, build your streak, and share your result. No account needed."
   },
   "random-list": {
     title: "Random List Generator & Picker Online | Pridocs",
@@ -197,6 +229,10 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
   "unit-converter": {
     title: "Unit Converter Online - Length, Weight, Temperature | Pridocs",
     description: "Convert length, weight, temperature and digital storage units instantly. Free, private, and ad-free unit converter."
+  },
+  "heic-to-jpg": {
+    title: "Free HEIC to JPG Converter Online - 100% Private | Pridocs",
+    description: "Convert iPhone HEIC/HEIF photos to JPG entirely in your browser. Free, private, ad-free, and no signup required. Your photos never leave your device."
   },
   "audio-trimmer": {
     title: "Audio Trimmer Online - Cut & Fade Audio Locally | Pridocs",

@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 import { tools } from '../data/tools'
 import ThemeToggle from '../components/ThemeToggle'
 
-const categoryOrder = ['pdf', 'document', 'image', 'spreadsheet', 'audio', 'data', 'utility']
+const categoryOrder = ['game', 'pdf', 'document', 'image', 'spreadsheet', 'audio', 'data', 'utility']
 const categoryLabels: Record<string, string> = {
+  game: 'Daily Games',
   pdf: 'PDF Tools',
   document: 'Document Converters',
   image: 'Image Converters & Editors',

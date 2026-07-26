@@ -3,7 +3,7 @@ import { FileType, Download, Loader2, Upload } from 'lucide-react'
 import mammoth from 'mammoth'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function DocxToTxt() {
+export default function DocxToTxt({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [result, setResult] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -50,10 +50,12 @@ export default function DocxToTxt() {
     <>
 
       <div className="max-w-3xl mx-auto px-4 py-10">
-        <div className="text-center mb-10">
-          <h1 className="text-3xl font-semibold text-slate-900 mb-3">DOCX to TXT</h1>
-          <p className="text-slate-500 max-w-lg mx-auto">Extract plain text from Word documents. Fast, private, and accurate.</p>
-        </div>
+        {!embedded && (
+          <div className="text-center mb-10">
+            <h1 className="text-3xl font-semibold text-slate-900 mb-3">DOCX to TXT</h1>
+            <p className="text-slate-500 max-w-lg mx-auto">Extract plain text from Word documents. Fast, private, and accurate.</p>
+          </div>
+        )}
 
         <label
           onDragOver={(e) => { e.preventDefault(); setDrag(true) }}

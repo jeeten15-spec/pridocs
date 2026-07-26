@@ -3,7 +3,7 @@ import { Download, Loader2, Upload } from 'lucide-react'
 import mammoth from 'mammoth'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function DocxToMarkdown() {
+export default function DocxToMarkdown({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [result, setResult] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -65,12 +65,14 @@ export default function DocxToMarkdown() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold text-slate-900 mb-3">DOCX to Markdown Converter Online - Free & Private</h1>
-        <p className="text-slate-500 max-w-xl mx-auto">
-          Convert Microsoft Word DOCX documents to clean Markdown text. Tables and original layout formatting are preserved safely on your local device.
-        </p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-semibold text-slate-900 mb-3">DOCX to Markdown Converter Online - Free & Private</h1>
+          <p className="text-slate-500 max-w-xl mx-auto">
+            Convert Microsoft Word DOCX documents to clean Markdown text. Tables and original layout formatting are preserved safely on your local device.
+          </p>
+        </div>
+      )}
 
       <label
         onDragOver={e => { e.preventDefault(); setDrag(true) }}

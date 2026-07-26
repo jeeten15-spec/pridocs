@@ -4,7 +4,7 @@ import { fetchFile } from '@ffmpeg/util'
 import { getFFmpeg } from '../lib/ffmpeg'
 import { cn, formatBytes } from '../lib/utils'
 
-export default function VideoToMp3() {
+export default function VideoToMp3({ embedded = false }: { embedded?: boolean }) {
   const [file, setFile] = useState<File | null>(null)
   const [busy, setBusy] = useState(false)
   const [status, setStatus] = useState('')
@@ -42,10 +42,12 @@ export default function VideoToMp3() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">Video to MP3</h1>
-        <p className="text-slate-500 dark:text-slate-400">Extract audio from any video file as MP3 — fully private, in your browser.</p>
-      </div>
+      {!embedded && (
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">Video to MP3</h1>
+          <p className="text-slate-500 dark:text-slate-400">Extract audio from any video file as MP3 — fully private, in your browser.</p>
+        </div>
+      )}
 
       <label
         onDragOver={e => { e.preventDefault(); setDrag(true) }}
