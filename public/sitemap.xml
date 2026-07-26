@@ -226,6 +226,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://pridocs.org/tools/image-filters</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/lorem-ipsum</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://pridocs.org/tools/json-xml-validator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

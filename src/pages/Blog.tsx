@@ -108,7 +108,7 @@ export default function Blog() {
             Pridocs is entirely patron-supported. We do not sell ads, we do not use tracking cookies, and we will never monetize your data.
           </p>
           <p>
-            We offer five generous, completely free file conversions every single day to anonymous visitors. If you believe that a safer, faster, and truly private internet should exist, consider supporting our infrastructure through a voluntary donation on our Buy Me a Coffee page.
+            Every tool on Pridocs is unlimited and free, with no daily caps and no account required. If you believe that a safer, faster, and truly private internet should exist, consider supporting our infrastructure through a voluntary donation on our Buy Me a Coffee page.
           </p>
           <p className="font-medium text-slate-900">
             Stop uploading your digital life to stranger's servers. Switch to Pridocs today.
