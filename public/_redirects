@@ -1,7 +1,1 @@
-# Cloudflare Pages auto-redirects *.html URLs to their extension-less "clean
-# URL" by default. Site-verification files (Yandex, etc.) must be served at
-# their literal .html URL with a direct 200, so this explicit self-rewrite
-# overrides that default before the SPA catch-all below.
-/yandex_12ca997a31ee67f7.html    /yandex_12ca997a31ee67f7.html    200
-
 /*    /index.html   200
