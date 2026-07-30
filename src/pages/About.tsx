@@ -26,6 +26,20 @@ export default function About() {
           support and donations of our global community of patrons.
         </p>
 
+        <p>
+          Pridocs is also open source. If you are curious about how it works under the hood — or would like to
+          suggest improvements — you can browse the codebase on{' '}
+          <a
+            href="https://github.com/jeeten15-spec/pridocs"
+            target="_blank"
+            rel="noreferrer"
+            className="text-indigo-600 hover:underline"
+          >
+            GitHub
+          </a>
+          .
+        </p>
+
         <h2 className="text-xl font-semibold text-slate-800 mt-10 mb-4">Our Core Philosophy</h2>
         
         <div className="space-y-6">

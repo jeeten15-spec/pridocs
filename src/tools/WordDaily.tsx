@@ -306,7 +306,8 @@ export default function WordDaily({ embedded = false }: WordDailyProps) {
           <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-2">Word Daily</h1>
           <p className="text-slate-500 dark:text-slate-400 text-sm">A new 5-letter word every day. Free, private, no account — your streak lives only in this browser.</p>
           <p className="mt-2 text-xs text-slate-400">
-            Come back tomorrow for a new daily word puzzle. Tip: pin Pridocs or install it as an app so Word Daily is always one tap away.
+            Come back tomorrow for a new daily word puzzle. Tip: pin this tab in your browser or bookmark pridocs.org
+            so Word Daily is always one click away.
           </p>
         </div>
       )}

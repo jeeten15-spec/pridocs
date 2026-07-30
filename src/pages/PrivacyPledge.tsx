@@ -31,6 +31,18 @@ export default function PrivacyPledge() {
           We use mature open-source WebAssembly and JavaScript libraries such as PDF.js, pdf-lib,
           mammoth.js, Tesseract.js and FFmpeg.wasm. These libraries run locally on your device.
         </p>
+        <p>
+          Pridocs itself is open source — you can inspect the code or contribute on{' '}
+          <a
+            href="https://github.com/jeeten15-spec/pridocs"
+            target="_blank"
+            rel="noreferrer"
+            className="text-indigo-600 hover:underline"
+          >
+            GitHub
+          </a>
+          .
+        </p>
 
         <h2 className="text-xl font-semibold text-slate-900 pt-4">Browser extension</h2>
         <p>
