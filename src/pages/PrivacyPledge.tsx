@@ -32,6 +32,15 @@ export default function PrivacyPledge() {
           mammoth.js, Tesseract.js and FFmpeg.wasm. These libraries run locally on your device.
         </p>
 
+        <h2 className="text-xl font-semibold text-slate-900 pt-4">Browser extension</h2>
+        <p>
+          The Pridocs browser extension is a shortcut to Pridocs tools. It does not transmit,
+          retain or analyse selected page content, browsing history, downloads or clipboard data,
+          and it does not upload files or use analytics. If you open tools from its popup, it
+          remembers up to four recent tool choices only in your browser&apos;s extension storage. You
+          can remove that data by clearing the extension&apos;s storage or uninstalling the extension.
+        </p>
+
         <h2 className="text-xl font-semibold text-slate-900 pt-4">Contact</h2>
         <p>
           If you ever have questions about our privacy practices, please{' '}
