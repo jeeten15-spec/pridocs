@@ -38,7 +38,10 @@ export default function QrCodeTool() {
     <div className="max-w-md mx-auto px-4 py-10">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold text-slate-900 mb-2">QR Code Generator</h1>
-        <p className="text-slate-500">Generate QR codes instantly. 100% private — generated locally, nothing sent anywhere.</p>
+        <p className="text-slate-500">
+          Free QR code generator for text, URLs, Wi‑Fi details and more — generated locally in your browser, nothing
+          uploaded anywhere.
+        </p>
       </div>
 
       <div className="space-y-4">
@@ -75,7 +78,8 @@ export default function QrCodeTool() {
       </div>
 
       <div className="mt-8 text-center text-xs text-slate-500">
-        Generated entirely on your device using the open-source <code>qrcode</code> library — your text is never sent to any server.
+        Generated entirely on your device using the open-source <code>qrcode</code> library — your text is never sent
+        to any server. Perfect for <strong>free QR codes</strong> for links, contact cards and offline posters.
       </div>
     </div>
   )

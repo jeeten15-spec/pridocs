@@ -110,7 +110,10 @@ export default function EmiCalculator() {
     <div className="max-w-2xl mx-auto px-4 py-10">
       <div className="text-center mb-6">
         <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">EMI / Mortgage Calculator</h1>
-        <p className="text-slate-500 dark:text-slate-400">Calculate loan EMI, total interest, prepayment savings and a full amortization schedule — privately in your browser.</p>
+        <p className="text-slate-500 dark:text-slate-400">
+          Free <strong>home loan EMI calculator</strong> for India and beyond — calculate EMI, total interest, prepayment
+          savings and a full amortization schedule privately in your browser.
+        </p>
       </div>
 
       <div className="flex justify-center mb-6">
@@ -274,7 +277,8 @@ export default function EmiCalculator() {
       )}
 
       <p className="mt-8 text-center text-xs text-slate-500">
-        Currency is auto-detected from your region (via Cloudflare's edge, not any third-party tracker) and can be changed above. All calculations happen locally in your browser.
+        Currency is auto-detected from your region (via Cloudflare&apos;s edge, not any third-party tracker) and can be
+        changed above. All EMI calculations happen locally in your browser — your loan details never leave your device.
       </p>
     </div>
   )

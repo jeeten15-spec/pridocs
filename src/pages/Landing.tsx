@@ -87,8 +87,13 @@ export default function Landing() {
               PRIDOCS
             </h1>
             <p className="text-lg text-slate-600 max-w-md">
-              Your files never leave your computer. Processing happens locally.
+              Your files never leave your device. Processing happens locally.
             </p>
+          </div>
+
+          {/* Gentle onboarding strip for new visitors */}
+          <div className="mb-4 text-xs sm:text-sm text-slate-500 bg-white/80 border border-slate-200 rounded-full px-4 py-2 shadow-sm">
+            First time here? <span className="font-medium">Search a tool → drop a file → everything stays on your device.</span>
           </div>
 
           {/* Search */}

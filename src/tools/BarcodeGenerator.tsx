@@ -50,7 +50,10 @@ export default function BarcodeGenerator() {
     <div className="max-w-md mx-auto px-4 py-10">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold text-slate-900 mb-2">Barcode Generator</h1>
-        <p className="text-slate-500">Generate CODE128, EAN-13, UPC and other barcode formats — 100% locally.</p>
+        <p className="text-slate-500">
+          Free online <strong>barcode generator</strong> for CODE128, EAN‑13, UPC and more — everything runs locally,
+          so product numbers never leave your device.
+        </p>
       </div>
 
       <div className="space-y-4">
@@ -95,7 +98,8 @@ export default function BarcodeGenerator() {
       <section className="mt-16 pt-10 border-t border-slate-200 text-center">
         <BarcodeIcon className="w-5 h-5 text-slate-400 mx-auto mb-3" />
         <p className="text-slate-500 text-sm max-w-sm mx-auto">
-          Generated entirely on your device using an open-source barcode library. Nothing is uploaded anywhere.
+          Generated entirely on your device using an open-source barcode library. Nothing is uploaded anywhere — ideal
+          for <strong>retail barcodes</strong>, <strong>CODE128 shipping labels</strong> and internal inventory tags.
         </p>
       </section>
     </div>

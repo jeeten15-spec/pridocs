@@ -81,7 +81,10 @@ export default function TextToSpeech() {
     <div className="max-w-xl mx-auto px-4 py-10">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-semibold text-slate-900 mb-2">Text to Speech Reader</h1>
-        <p className="text-slate-500">Have any text read aloud using your device's own voices — free and private.</p>
+        <p className="text-slate-500">
+          Have any text read aloud using your device&apos;s own voices — a free, private{' '}
+          <strong>online text to speech</strong> reader with no uploads or accounts.
+        </p>
       </div>
 
       <div className="space-y-4">

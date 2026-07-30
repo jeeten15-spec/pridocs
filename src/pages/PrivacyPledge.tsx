@@ -8,7 +8,7 @@ export default function PrivacyPledge() {
       
       <div className="prose prose-slate max-w-none text-slate-600 space-y-4">
         <p>
-          At Pridocs we make a simple promise: <strong>Your files never leave your computer.</strong>
+          At Pridocs we make a simple promise: <strong>Your files never leave your device.</strong>
         </p>
         
         <p>

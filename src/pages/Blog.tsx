@@ -212,7 +212,7 @@ export default function Blog() {
 
           <h2 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Enter Pridocs: Local-First File Processing</h2>
           <p>
-            Pridocs is a completely free, ad-free suite of web tools built on a revolutionary principle: <strong>Your files never leave your computer</strong>. It not only ensures complete privacy for your data, it also requires much less internet bandwidth as your important files are not uploaded to servers and downloaded back after processing.
+            Pridocs is a completely free, ad-free suite of web tools built on a revolutionary principle: <strong>Your files never leave your device</strong>. It not only ensures complete privacy for your data, it also requires much less internet bandwidth as your important files are not uploaded to servers and downloaded back after processing.
           </p>
 
           <div className="my-8 p-5 bg-slate-50 rounded-xl border border-slate-200 font-mono text-sm">

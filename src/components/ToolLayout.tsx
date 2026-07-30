@@ -3,10 +3,19 @@ import { ArrowLeft } from 'lucide-react'
 import ToolSEO from './ToolSEO'
 import PaymentButton from './PaymentButton'
 import ThemeToggle from './ThemeToggle'
+import { tools } from '../data/tools'
 
 export default function ToolLayout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
   const toolId = location.pathname.replace(/^\/tools\//, '')
+
+  const current = tools.find((t) => t.path === location.pathname)
+  const related =
+    current != null
+      ? tools
+          .filter((t) => t.id !== current.id && t.category === current.category)
+          .slice(0, 2)
+      : []
 
   return (
     <div className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-slate-900">
@@ -42,6 +51,19 @@ export default function ToolLayout({ children }: { children: React.ReactNode }) 
         <p className="mb-1">
           Files never leave your device · Processing happens locally
         </p>
+        {related.length > 0 && (
+          <p className="mb-3 text-[11px] sm:text-xs text-slate-500">
+            Also try:{' '}
+            {related.map((tool, index) => (
+              <span key={tool.id}>
+                <Link to={tool.path} className="text-indigo-600 hover:underline">
+                  {tool.shortName}
+                </Link>
+                {index < related.length - 1 && <span className="text-slate-400"> · </span>}
+              </span>
+            ))}
+          </p>
+        )}
         <p className="text-slate-400 max-w-md mx-auto mb-5">
           Recommended max size: 50–100 MB (depends on your device RAM). Large files may be slow or fail in the browser.
         </p>
