@@ -47,11 +47,20 @@ export default defineConfig({
             options: { cacheName: 'pridocs-app-assets' },
           },
           {
-            urlPattern: /\.(wasm|data|traineddata|gz)$/,
+            urlPattern: /\.(wasm|data|traineddata|gz|bin)$/,
             handler: 'CacheFirst',
             options: {
               cacheName: 'pridocs-tool-engines',
-              expiration: { maxEntries: 30, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 30 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: /\/models\/essentia\/.*\/model\.json$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'pridocs-music-models',
+              expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 30 },
               cacheableResponse: { statuses: [0, 200] },
             },
           },
@@ -68,6 +77,7 @@ export default defineConfig({
       '@ffmpeg/ffmpeg',
       '@ffmpeg/util',
       '@ffmpeg/core',
+      'essentia.js',
     ],
   },
   worker: {

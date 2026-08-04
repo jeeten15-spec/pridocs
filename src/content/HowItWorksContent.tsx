@@ -45,13 +45,19 @@ export default function HowItWorksContent() {
             <strong>Audio and video tools</strong> (audio conversion, video to MP3/GIF, Song2Vid) use <strong>FFmpeg.wasm</strong>, which compiles the real FFmpeg encoder/decoder to WebAssembly. The first time you use one of these tools, your browser downloads the FFmpeg engine itself (a few megabytes of code, currently served from the public unpkg.com CDN) — this is the <em>software</em>, not your file. Once it's loaded, your actual audio/video data is processed by that engine locally and is never sent anywhere.
           </li>
           <li>
+            <strong>Song Analyzer</strong> uses <strong>Essentia.js</strong> (music/audio analysis algorithms compiled to WebAssembly) for tempo (BPM), key, loudness and energy, plus <strong>TensorFlow.js</strong> with Essentia's MusiCNN models for genre, mood, danceability and acousticness estimates. On first use, your browser downloads those model files (a few megabytes each) and caches them locally — again, that is the analysis software, not your song.
+          </li>
+          <li>
+            <strong>AI Background Remover</strong> runs an on-device image model (<strong>@imgly/background-removal</strong>) in your browser. The model weights download on first use and are then reused from cache; your photo stays on the device.
+          </li>
+          <li>
             <strong>Simple image tools</strong> (resize, format conversion, filters) use the browser's built-in <strong>Canvas 2D API</strong> directly — no external library is even needed to read pixels, resize, or re-encode an image.
           </li>
         </ul>
 
         <h2 className="text-xl font-semibold text-slate-900 mt-8">Why your file never reaches a server</h2>
         <p>
-          All of the processing described above — PDF.js, pdf-lib, Mammoth.js, Tesseract.js, FFmpeg.wasm, and the Canvas API — runs using APIs your browser already provides locally. None of it requires sending your file's bytes to a remote server, so Pridocs' code simply never does. The only network requests a Pridocs tool can make are: loading the page itself, and, for the two exceptions noted above (FFmpeg's engine binary and Tesseract's language-data file), a one-time download of that <em>processing software</em> — never your file.
+          All of the processing described above — PDF.js, pdf-lib, Mammoth.js, Tesseract.js, FFmpeg.wasm, Essentia.js, TensorFlow.js models, and the Canvas API — runs using APIs your browser already provides locally. None of it requires sending your file's bytes to a remote server, so Pridocs' code simply never does. The only network requests a Pridocs tool can make are: loading the page itself, and one-time downloads of <em>processing software</em> (for example FFmpeg's engine binary, Tesseract's language data, Essentia/TensorFlow music models, or the background-removal model) — never your file.
         </p>
         <p>
           You don't have to take our word for it. Open your browser's Developer Tools (<strong>F12</strong>), go to the <strong>Network</strong> tab, and convert a file. You will not see any outgoing request containing your file's data.
@@ -65,6 +71,9 @@ export default function HowItWorksContent() {
         <h2 className="text-xl font-semibold text-slate-900 mt-8">File size &amp; performance</h2>
         <p>
           Because everything runs on your device rather than a server, performance depends on your device's own RAM and CPU rather than ours. We recommend keeping individual files under roughly <strong>50–100 MB</strong> for a smooth experience — very large PDFs, videos, or image batches can run slowly or fail if your browser tab runs out of memory.
+        </p>
+        <p>
+          If you regularly work with larger media (for example long songs in <strong>Song2Vid</strong>), you can often stretch what the browser can handle by giving Windows more <strong>virtual memory</strong> — letting it use free space on a fast <strong>SSD</strong> as overflow when RAM is full. In Windows: Settings → System → About → Advanced system settings → Performance → Settings → Advanced → Virtual memory → Change, then set a larger custom paging file on an SSD drive. This does not upload your files anywhere; it only changes how your own computer manages memory. Results vary by device, and a hard limit still applies inside a single browser tab, but many people find this tip lets them finish jobs that previously crashed.
         </p>
 
         <h2 className="text-xl font-semibold text-slate-900 mt-8">What about very large files or higher quality than a browser can deliver?</h2>

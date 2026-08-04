@@ -91,6 +91,10 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     title: "Song2Vid: Free Audio to Video Converter Online | Pridocs",
     description: "Turn any song or audio track into an MP4 video utilizing custom images, visual GIFs, or video clips. Fast local rendering without server upload delays."
   },
+  "song-analyzer": {
+    title: "Free Song Analyzer Online - BPM, Key, Genre & Mood | Pridocs",
+    description: "Analyze a local audio file for BPM, musical key, loudness, energy, danceability, genre and mood — entirely in your browser. No uploads, no YouTube links, no account."
+  },
   "json-to-csv": {
     title: "JSON to CSV Converter Online - Secure Developer Tools | Pridocs",
     description: "Convert structured JSON data arrays into clean CSV formats. Parse corporate application files safely without exposing logs to external tracking."

@@ -18,6 +18,7 @@ import DocxToMarkdown from './tools/DocxToMarkdown'
 import DocxToHtml from './tools/DocxToHtml'
 import DocxToTxt from './tools/DocxToTxt'
 import Song2Vid from './tools/Song2Vid'
+import SongAnalyzer from './tools/SongAnalyzer'
 import CropPdf from './tools/CropPdf'
 import SignPdf from './tools/SignPdf'
 import JpgToPng from './tools/JpgToPng'
@@ -107,6 +108,7 @@ export default function App() {
 
       {/* Audio / Video */}
       <Route path="/tools/song2vid" element={<ToolLayout><Song2Vid /></ToolLayout>} />
+      <Route path="/tools/song-analyzer" element={<ToolLayout><SongAnalyzer /></ToolLayout>} />
       <Route path="/tools/video-to-gif" element={<ToolLayout><VideoToGif /></ToolLayout>} />
       <Route path="/tools/audio-trimmer" element={<ToolLayout><AudioTrimmer /></ToolLayout>} />
 

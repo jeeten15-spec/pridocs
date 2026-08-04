@@ -658,6 +658,27 @@ export const tools: Tool[] = [
     phase: 1,
     popular: true,
   },
+  {
+    id: 'song-analyzer',
+    name: 'Song Analyzer',
+    shortName: 'Song Analyzer',
+    description: 'Estimate BPM, key, loudness, genre and mood from a local audio file — privately in your browser.',
+    path: '/tools/song-analyzer',
+    category: 'audio',
+    keywords: [
+      'song analyzer',
+      'bpm detector',
+      'find song key',
+      'music key finder',
+      'audio features',
+      'genre detector',
+      'mood detection',
+      'danceability',
+    ],
+    icon: 'Music',
+    phase: 1,
+    popular: true,
+  },
 ]
 
 export const popularTools = tools.filter((t) => t.popular)
