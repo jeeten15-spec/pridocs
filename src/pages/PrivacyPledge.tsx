@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom'
 import PaymentButton from '../components/PaymentButton'
+import PageSEO from '../components/PageSEO'
 
 export default function PrivacyPledge() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
+      <PageSEO
+        title="Privacy Pledge — Your Files Never Leave Your Device | Pridocs"
+        description="Pridocs privacy pledge: file processing runs in your browser. No uploads, no ads, no tracking of your documents."
+        path="/privacy-pledge"
+        keywords="pridocs privacy, no upload converter, private online tools"
+      />
       <h1 className="text-3xl font-semibold text-slate-900 mb-6">Privacy Pledge</h1>
       
       <div className="prose prose-slate max-w-none text-slate-600 space-y-4">

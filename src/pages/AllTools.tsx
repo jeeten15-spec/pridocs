@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { tools } from '../data/tools'
 import ThemeToggle from '../components/ThemeToggle'
+import PageSEO from '../components/PageSEO'
 
 const categoryOrder = ['game', 'pdf', 'document', 'image', 'spreadsheet', 'audio', 'data', 'utility']
 const categoryLabels: Record<string, string> = {
@@ -23,6 +24,12 @@ export default function AllTools() {
 
   return (
     <div className="min-h-full flex flex-col bg-[#f8fafc] dark:bg-slate-900">
+      <PageSEO
+        title="All Tools — Free Private Converters & Utilities | Pridocs"
+        description="Browse every Pridocs tool: HEIC to JPG, background remover, PDF converters, OCR, Word Daily, invoice PDF, ZIP, and more. Free, ad-free, no uploads."
+        path="/all-tools"
+        keywords="all tools, free online converters, private file tools, heic to jpg, background remover"
+      />
       {/* Header with logo */}
       <header className="border-b border-slate-200/80 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur sticky top-0 z-30">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">

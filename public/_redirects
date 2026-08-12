@@ -1,1 +1,14 @@
+# Prefer non-trailing-slash URLs (avoids duplicate 200s that GSC marks as
+# "Alternative page with proper canonical tag").
+/tools/:id/          /tools/:id          301
+/convert/:slug/      /convert/:slug      301
+/blog/:slug/         /blog/:slug         301
+/about/              /about              301
+/contact/            /contact            301
+/all-tools/          /all-tools          301
+/privacy-pledge/     /privacy-pledge     301
+/how-it-works/       /how-it-works       301
+/blog/               /blog               301
+
+# SPA fallback (rewrite, not a redirect)
 /*    /index.html   200

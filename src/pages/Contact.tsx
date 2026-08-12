@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PaymentButton from '../components/PaymentButton'
+import PageSEO from '../components/PageSEO'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -18,6 +19,11 @@ export default function Contact() {
 
   return (
     <div className="max-w-xl mx-auto px-4 py-12">
+      <PageSEO
+        title="Contact Pridocs"
+        description="Contact the Pridocs team. Questions, feedback, and support for our free private browser tools."
+        path="/contact"
+      />
       <h1 className="text-3xl font-semibold text-slate-900 mb-2">Contact Us</h1>
       <p className="text-slate-500 mb-8">
         Have feedback, a feature request, or found a bug? We’d love to hear from you.

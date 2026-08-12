@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom'
 import PaymentButton from '../components/PaymentButton'
+import PageSEO from '../components/PageSEO'
 
 export default function About() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <PageSEO
+        title="About Pridocs — Private, Ad-Free Browser Tools"
+        description="Pridocs processes files in your browser so they never leave your device. Learn about our privacy-first, ad-free tool suite."
+        path="/about"
+        keywords="about pridocs, private file converter, browser based tools"
+      />
       <h1 className="text-3xl font-semibold text-slate-900 mb-2">About Pridocs</h1>
       <p className="text-lg text-slate-600 mb-10">Technology That Empowers, Privacy That Restores</p>
       

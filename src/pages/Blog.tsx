@@ -1,10 +1,17 @@
 import { Link } from 'react-router-dom'
 import { blogPosts } from '../data/blogPosts'
 import PaymentButton from '../components/PaymentButton'
+import PageSEO from '../components/PageSEO'
 
 export default function Blog() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
+      <PageSEO
+        title="Pridocs Blog — Private Tools Guides & Tips"
+        description="Guides on private file tools, image workflows, word games, and browser-based converters from Pridocs."
+        path="/blog"
+        keywords="pridocs blog, private file tools, background remover guide, word tools"
+      />
       <div className="mb-8">
         <Link to="/" className="text-sm text-indigo-600 hover:underline">
           ← Home
