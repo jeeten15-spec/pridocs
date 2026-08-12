@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useSearchParams, Link } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import Fuse from 'fuse.js'
-import { tools, popularTools } from '../data/tools'
+import { tools, homepagePopularTools } from '../data/tools'
 import PaymentButton from '../components/PaymentButton'
 import ThemeToggle from '../components/ThemeToggle'
 import { cn } from '../lib/utils'
@@ -83,11 +83,14 @@ export default function Landing() {
               alt="Pridocs Logo" 
               className="w-20 h-20 mb-3 rounded-full object-cover drop-shadow-xl" 
             />
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tighter text-[#0A2540] dark:text-slate-100 mb-2">
+            <p className="text-sm font-semibold tracking-[0.2em] text-[#0A2540]/dark:text-slate-300 mb-2">
               PRIDOCS
+            </p>
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#0A2540] dark:text-slate-100 mb-2 max-w-2xl">
+              Free Private File Tools — Convert Images, HEIC, Audio &amp; More in Your Browser
             </h1>
-            <p className="text-lg text-slate-600 max-w-md">
-              Your files never leave your device. Processing happens locally.
+            <p className="text-lg text-slate-600 max-w-xl">
+              No uploads. No ads. Your files never leave your device — processing happens locally.
             </p>
           </div>
 
@@ -112,7 +115,7 @@ export default function Landing() {
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
                 onFocus={() => query && setShowResults(true)}
-                placeholder="What do you need to do? (e.g., 'Convert MP3 to MP4', 'PDF to JPG')"
+                placeholder="What do you need to do? (e.g., 'HEIC to JPG', 'remove background', 'compress image')"
                 className="flex-1 bg-transparent outline-none text-slate-800 placeholder:text-slate-400 text-[15px]"
                 autoComplete="off"
               />
@@ -149,7 +152,7 @@ export default function Landing() {
           {/* Popular tools */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-slate-500">
             <span>Popular Tools:</span>
-            {popularTools.map((tool, i) => (
+            {homepagePopularTools.map((tool, i) => (
               <span key={tool.id} className="flex items-center gap-2">
                 <Link
                   to={tool.path}
@@ -157,7 +160,7 @@ export default function Landing() {
                 >
                   {tool.shortName}
                 </Link>
-                {i < popularTools.length - 1 && <span className="text-slate-300">|</span>}
+                {i < homepagePopularTools.length - 1 && <span className="text-slate-300">|</span>}
               </span>
             ))}
           </div>

@@ -22,7 +22,6 @@ export const tools: Tool[] = [
     keywords: ['pdf to jpg', 'pdf to jpeg', 'pdf2jpg', 'convert pdf to image', 'pdf to picture'],
     icon: 'Image',
     phase: 1,
-    popular: true,
   },
   {
     id: 'pdf-to-png',
@@ -45,7 +44,6 @@ export const tools: Tool[] = [
     keywords: ['merge pdf', 'combine pdf', 'join pdf', 'pdf merger', 'merge pdfs'],
     icon: 'Files',
     phase: 1,
-    popular: true,
   },
   {
     id: 'split-pdf',
@@ -90,7 +88,6 @@ export const tools: Tool[] = [
     keywords: ['pdf ocr', 'ocr pdf', 'searchable pdf', 'scan to text', 'tesseract'],
     icon: 'ScanText',
     phase: 1,
-    popular: true,
   },
   {
     id: 'images-to-pdf',
@@ -102,7 +99,6 @@ export const tools: Tool[] = [
     keywords: ['jpg to pdf', 'png to pdf', 'image to pdf', 'photos to pdf', 'convert images to pdf'],
     icon: 'Files',
     phase: 1,
-    popular: true,
   },
   {
     id: 'background-remover',
@@ -114,7 +110,7 @@ export const tools: Tool[] = [
     keywords: ['remove background', 'background remover', 'transparent background', 'cut out image', 'remove bg free', 'photo background eraser'],
     icon: 'Wand2',
     phase: 1,
-    popular: true,
+    popular: true
   },
   {
     id: 'image-to-text',
@@ -126,7 +122,7 @@ export const tools: Tool[] = [
     keywords: ['image to text', 'jpg to text', 'photo to text', 'ocr online', 'extract text from image'],
     icon: 'ScanText',
     phase: 1,
-    popular: true,
+    popular: true
   },
   {
     id: 'docx-to-markdown',
@@ -138,7 +134,6 @@ export const tools: Tool[] = [
     keywords: ['docx to markdown', 'word to md', 'docx to md', 'convert docx to markdown'],
     icon: 'FileText',
     phase: 1,
-    popular: true,
   },
   {
     id: 'docx-to-html',
@@ -370,6 +365,7 @@ export const tools: Tool[] = [
     keywords: ['resize image', 'compress image', 'image optimizer'],
     icon: 'Image',
     phase: 1,
+    popular: true
   },
   {
     id: 'image-to-webp',
@@ -415,7 +411,7 @@ export const tools: Tool[] = [
     keywords: ['docx to pdf', 'word to pdf', 'convert word to pdf', 'doc to pdf'],
     icon: 'FileText',
     phase: 1,
-    popular: true,
+    popular: true
   },
   {
     id: 'pdf-to-docx',
@@ -427,7 +423,6 @@ export const tools: Tool[] = [
     keywords: ['pdf to docx', 'pdf to word', 'convert pdf to word', 'pdf to doc'],
     icon: 'FileText',
     phase: 1,
-    popular: true,
   },
 
   {
@@ -452,7 +447,6 @@ export const tools: Tool[] = [
     keywords: ['wav to mp3', 'mp3 to wav', 'audio converter', 'convert audio', 'flac to mp3', 'ogg to mp3'],
     icon: 'Music',
     phase: 1,
-    popular: true,
   },
   {
     id: 'video-to-mp3',
@@ -476,7 +470,6 @@ export const tools: Tool[] = [
     keywords: ['json validator', 'xml validator', 'format json', 'validate json'],
     icon: 'FileJson',
     phase: 1,
-    popular: true,
   },
   {
     id: 'text-case-counter',
@@ -499,7 +492,7 @@ export const tools: Tool[] = [
     keywords: ['emi calculator', 'mortgage calculator', 'loan calculator', 'home loan emi'],
     icon: 'Calculator',
     phase: 1,
-    popular: true,
+    popular: true
   },
   {
     id: 'word-tools',
@@ -533,7 +526,7 @@ export const tools: Tool[] = [
     keywords: ['daily word game', 'word puzzle', 'wordle alternative', 'free word game', 'guess the word', 'word game no ads'],
     icon: 'Grid3x3',
     phase: 1,
-    popular: true,
+    popular: true
   },
   {
     id: 'meme-generator',
@@ -645,6 +638,7 @@ export const tools: Tool[] = [
     keywords: ['heic to jpg', 'heic to jpeg converter', 'convert iphone photos', 'heif to jpg'],
     icon: 'ImageDown',
     phase: 1,
+    popular: true
   },
   {
     id: 'song2vid',
@@ -656,7 +650,7 @@ export const tools: Tool[] = [
     keywords: ['song to video', 'mp3 to video', 'audio to video', 'bhajan video', 'song2vid'],
     icon: 'Film',
     phase: 1,
-    popular: true,
+    popular: true
   },
   {
     id: 'song-analyzer',
@@ -677,8 +671,111 @@ export const tools: Tool[] = [
     ],
     icon: 'Music',
     phase: 1,
-    popular: true,
+  },
+  {
+    id: 'video-to-gif',
+    name: 'Video to GIF',
+    shortName: 'Video → GIF',
+    description: 'Convert short video clips to GIF with FFmpeg.wasm in your browser.',
+    path: '/tools/video-to-gif',
+    category: 'audio',
+    keywords: ['video to gif', 'mp4 to gif', 'convert video to gif', 'make gif online'],
+    icon: 'Film',
+    phase: 1,
+  },
+  {
+    id: 'audio-trimmer',
+    name: 'Audio Trimmer',
+    shortName: 'Audio Trimmer',
+    description: 'Trim and fade audio tracks privately in your browser.',
+    path: '/tools/audio-trimmer',
+    category: 'audio',
+    keywords: ['audio trimmer', 'trim mp3', 'cut audio online'],
+    icon: 'Music',
+    phase: 1,
+  },
+  {
+    id: 'exif-remover',
+    name: 'EXIF / Metadata Remover',
+    shortName: 'EXIF Remover',
+    description: 'Strip GPS and camera metadata from photos by re-encoding locally.',
+    path: '/tools/exif-remover',
+    category: 'image',
+    keywords: ['exif remover', 'remove metadata from photo', 'strip gps from image', 'remove photo location'],
+    icon: 'Shield',
+    phase: 1,
+  },
+  {
+    id: 'speech-to-text',
+    name: 'Speech to Text',
+    shortName: 'Speech → Text',
+    description: 'Dictate notes with browser speech recognition.',
+    path: '/tools/speech-to-text',
+    category: 'utility',
+    keywords: ['speech to text', 'voice to text', 'dictation online', 'transcription'],
+    icon: 'Mic',
+    phase: 1,
+  },
+  {
+    id: 'invoice-pdf',
+    name: 'Invoice / Estimate PDF',
+    shortName: 'Invoice PDF',
+    description: 'Create a simple invoice or estimate PDF entirely on your device.',
+    path: '/tools/invoice-pdf',
+    category: 'utility',
+    keywords: ['invoice generator', 'estimate pdf', 'create invoice online', 'invoice template'],
+    icon: 'FileText',
+    phase: 1,
+  },
+  {
+    id: 'zip-tool',
+    name: 'ZIP Create & Extract',
+    shortName: 'ZIP Tool',
+    description: 'Create or extract ZIP archives locally in your browser.',
+    path: '/tools/zip-tool',
+    category: 'utility',
+    keywords: ['zip file online', 'create zip', 'extract zip', 'unzip online'],
+    icon: 'FileArchive',
+    phase: 1,
+  },
+  {
+    id: 'markdown-to-pdf',
+    name: 'Markdown to PDF',
+    shortName: 'MD → PDF',
+    description: 'Convert Markdown notes to a text-focused PDF in your browser.',
+    path: '/tools/markdown-to-pdf',
+    category: 'document',
+    keywords: ['markdown to pdf', 'md to pdf', 'convert markdown'],
+    icon: 'FileText',
+    phase: 1,
+  },
+  {
+    id: 'image-watermark',
+    name: 'Image Watermark',
+    shortName: 'Watermark',
+    description: 'Add a text watermark to photos locally — no upload.',
+    path: '/tools/image-watermark',
+    category: 'image',
+    keywords: ['image watermark', 'add watermark to photo', 'watermark online'],
+    icon: 'Image',
+    phase: 1,
   },
 ]
 
 export const popularTools = tools.filter((t) => t.popular)
+
+/** Homepage spotlight order — SEO priority niches (not saturated PDF head terms). */
+export const homepagePopularIds = [
+  'heic-to-jpg',
+  'background-remover',
+  'image-resize',
+  'image-to-text',
+  'word-daily',
+  'emi-calculator',
+  'song2vid',
+  'docx-to-pdf',
+] as const
+
+export const homepagePopularTools = homepagePopularIds
+  .map((id) => tools.find((t) => t.id === id))
+  .filter((t): t is Tool => Boolean(t))

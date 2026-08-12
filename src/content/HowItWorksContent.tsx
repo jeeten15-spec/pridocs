@@ -51,7 +51,10 @@ export default function HowItWorksContent() {
             <strong>AI Background Remover</strong> runs an on-device image model (<strong>@imgly/background-removal</strong>) in your browser. The model weights download on first use and are then reused from cache; your photo stays on the device.
           </li>
           <li>
-            <strong>Simple image tools</strong> (resize, format conversion, filters) use the browser's built-in <strong>Canvas 2D API</strong> directly — no external library is even needed to read pixels, resize, or re-encode an image.
+            <strong>Simple image tools</strong> (resize, format conversion, filters, EXIF strip, watermarks) use the browser's built-in <strong>Canvas 2D API</strong> directly — no external library is even needed to read pixels, resize, or re-encode an image.
+          </li>
+          <li>
+            <strong>ZIP archives</strong> use <strong>JSZip</strong> in the browser. <strong>Invoice PDF</strong> and <strong>Markdown to PDF</strong> use <strong>pdf-lib</strong>. Speech-to-text uses the browser&apos;s Web Speech API (engine depends on your browser/OS).
           </li>
         </ul>
 

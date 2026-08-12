@@ -6,7 +6,9 @@ import HowItWorks from './pages/HowItWorks'
 import AllTools from './pages/AllTools'
 import About from './pages/About'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 import PdfToJpg from './tools/PdfToJpg'
 import PdfToPng from './tools/PdfToPng'
 import MergePdf from './tools/MergePdf'
@@ -67,6 +69,12 @@ import PomodoroTimer from './tools/PomodoroTimer'
 import RandomList from './tools/RandomList'
 import CrosswordSolver from './tools/CrosswordSolver'
 import HeicToJpg from './tools/HeicToJpg'
+import ExifRemover from './tools/ExifRemover'
+import SpeechToText from './tools/SpeechToText'
+import InvoicePdf from './tools/InvoicePdf'
+import ZipTool from './tools/ZipTool'
+import MarkdownToPdf from './tools/MarkdownToPdf'
+import ImageWatermark from './tools/ImageWatermark'
 import ConvertLandingPage from './pages/ConvertLandingPage'
 
 
@@ -79,6 +87,7 @@ export default function App() {
       <Route path="/all-tools" element={<AllTools />} />
       <Route path="/about" element={<About />} />
       <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/contact" element={<Contact />} />
 
       {/* PDF Tools */}
@@ -152,11 +161,17 @@ export default function App() {
       <Route path="/tools/random-list" element={<ToolLayout><RandomList /></ToolLayout>} />
       <Route path="/tools/crossword-solver" element={<ToolLayout><CrosswordSolver /></ToolLayout>} />
       <Route path="/tools/heic-to-jpg" element={<ToolLayout><HeicToJpg /></ToolLayout>} />
+      <Route path="/tools/exif-remover" element={<ToolLayout><ExifRemover /></ToolLayout>} />
+      <Route path="/tools/speech-to-text" element={<ToolLayout><SpeechToText /></ToolLayout>} />
+      <Route path="/tools/invoice-pdf" element={<ToolLayout><InvoicePdf /></ToolLayout>} />
+      <Route path="/tools/zip-tool" element={<ToolLayout><ZipTool /></ToolLayout>} />
+      <Route path="/tools/markdown-to-pdf" element={<ToolLayout><MarkdownToPdf /></ToolLayout>} />
+      <Route path="/tools/image-watermark" element={<ToolLayout><ImageWatermark /></ToolLayout>} />
 
       {/* Long-tail SEO landing pages (data-driven, see src/data/convertPages.ts) */}
       <Route path="/convert/:slug" element={<ConvertLandingPage />} />
 
-      <Route path="*" element={<Landing />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   )
 }

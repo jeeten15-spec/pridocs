@@ -12,9 +12,21 @@ export default function ToolLayout({ children }: { children: React.ReactNode }) 
   const current = tools.find((t) => t.path === location.pathname)
   const related =
     current != null
-      ? tools
-          .filter((t) => t.id !== current.id && t.category === current.category)
-          .slice(0, 2)
+      ? (() => {
+          const same = tools.filter((t) => t.id !== current.id && t.category === current.category)
+          const extras = tools.filter(
+            (t) => t.id !== current.id && t.category !== current.category && (t.popular || t.category === 'image')
+          )
+          const seen = new Set<string>()
+          const out: typeof tools = []
+          for (const t of [...same, ...extras]) {
+            if (seen.has(t.id)) continue
+            seen.add(t.id)
+            out.push(t)
+            if (out.length >= 8) break
+          }
+          return out
+        })()
       : []
 
   return (

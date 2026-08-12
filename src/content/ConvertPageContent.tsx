@@ -6,8 +6,14 @@
 // `children` since it's inherently tool-specific and JS-only.
 import React from 'react'
 import type { ConvertPage } from '../data/convertPages'
+import { tools } from '../data/tools'
 
 export default function ConvertPageContent({ page, children }: { page: ConvertPage; children?: React.ReactNode }) {
+  const primary = tools.find((t) => t.id === page.toolId)
+  const related = tools
+    .filter((t) => t.id !== page.toolId && (t.category === primary?.category || t.popular))
+    .slice(0, 6)
+
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <div className="text-center mb-10">
@@ -20,6 +26,31 @@ export default function ConvertPageContent({ page, children }: { page: ConvertPa
       </div>
 
       <div className="mb-16">{children}</div>
+
+      {(primary || related.length > 0) && (
+        <section className="mb-12 pt-8 border-t border-slate-200">
+          <h2 className="text-lg font-semibold text-slate-900 mb-3">Related tools</h2>
+          <p className="text-sm text-slate-600 leading-relaxed">
+            {primary && (
+              <>
+                Open the full tool page:{' '}
+                <a href={primary.path} className="text-indigo-600 hover:underline">
+                  {primary.name}
+                </a>
+                {related.length > 0 ? '. Also try: ' : '.'}
+              </>
+            )}
+            {related.map((t, i) => (
+              <span key={t.id}>
+                <a href={t.path} className="text-indigo-600 hover:underline">
+                  {t.shortName}
+                </a>
+                {i < related.length - 1 ? ' · ' : ''}
+              </span>
+            ))}
+          </p>
+        </section>
+      )}
 
       <section className="pt-10 border-t border-slate-200">
         <h2 className="text-xl font-semibold text-slate-900 mb-6">Frequently asked questions</h2>

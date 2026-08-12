@@ -148,8 +148,8 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     description: "Generate clean Lorem Ipsum placeholder text for designs and mockups. Instant and private."
   },
   "video-to-gif": {
-    title: "Video to GIF Converter Online - Local Processing | Pridocs",
-    description: "Convert short video clips to high-quality GIFs using browser-side processing. Your media stays on your device."
+    title: "Video to GIF Converter Online - Private FFmpeg.wasm | Pridocs",
+    description: "Convert short MP4 clips to GIF entirely in your browser. Free, private, no upload."
   },
 
   "docx-to-pdf": {
@@ -241,5 +241,29 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
   "audio-trimmer": {
     title: "Audio Trimmer Online - Cut & Fade Audio Locally | Pridocs",
     description: "Trim and fade audio tracks privately in your browser. No uploads required."
+  },
+  "exif-remover": {
+    title: "EXIF Metadata Remover - Strip GPS from Photos | Pridocs",
+    description: "Remove EXIF, GPS and camera metadata from photos by re-encoding locally. Free and private."
+  },
+  "speech-to-text": {
+    title: "Speech to Text Online - Browser Dictation | Pridocs",
+    description: "Dictate notes with your browser's speech recognition. Free speech-to-text tool from Pridocs."
+  },
+  "invoice-pdf": {
+    title: "Free Invoice Generator PDF Online - Private | Pridocs",
+    description: "Create invoice or estimate PDFs on your device. No account, no upload, free invoice template."
+  },
+  "zip-tool": {
+    title: "ZIP File Online - Create & Extract ZIP Privately | Pridocs",
+    description: "Create or extract ZIP archives in your browser. Free unzip/create tool with no upload."
+  },
+  "markdown-to-pdf": {
+    title: "Markdown to PDF Converter Online | Pridocs",
+    description: "Convert Markdown to PDF locally in your browser. Free MD to PDF tool, no signup."
+  },
+  "image-watermark": {
+    title: "Add Watermark to Image Online - Private | Pridocs",
+    description: "Add a text watermark to photos in your browser. Free image watermark tool, no upload."
   }
 }
