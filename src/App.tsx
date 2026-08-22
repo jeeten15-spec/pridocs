@@ -52,6 +52,7 @@ import DocxToPdf from './tools/DocxToPdf'
 import PdfToDocx from './tools/PdfToDocx'
 import UnitConverter from './tools/UnitConverter'
 import WordDaily from './tools/WordDaily'
+import DailyScramble from './tools/DailyScramble'
 import ImagesToPdf from './tools/ImagesToPdf'
 import BackgroundRemover from './tools/BackgroundRemover'
 import MemeGenerator from './tools/MemeGenerator'
@@ -153,6 +154,7 @@ export default function App() {
       <Route path="/tools/emi-calculator" element={<ToolLayout><EmiCalculator /></ToolLayout>} />
       <Route path="/tools/word-tools" element={<ToolLayout><WordTools /></ToolLayout>} />
       <Route path="/tools/word-daily" element={<ToolLayout><WordDaily /></ToolLayout>} />
+      <Route path="/tools/daily-scramble" element={<ToolLayout><DailyScramble /></ToolLayout>} />
       <Route path="/tools/meme-generator" element={<ToolLayout><MemeGenerator /></ToolLayout>} />
       <Route path="/tools/color-palette" element={<ToolLayout><ColorPalette /></ToolLayout>} />
       <Route path="/tools/barcode-generator" element={<ToolLayout><BarcodeGenerator /></ToolLayout>} />

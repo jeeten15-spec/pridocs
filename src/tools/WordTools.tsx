@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { loadDictionary } from '../lib/dictionary'
 
 type Tab = 'unscramble' | 'starts' | 'anagram' | 'rhyme'
@@ -36,7 +37,7 @@ export default function WordTools() {
 
   useEffect(() => {
     setBusy(true)
-    loadDictionary().then(list => {
+    loadDictionary().then((list) => {
       setWords(list)
       setDictLabel(
         list.length > 20000
@@ -56,9 +57,9 @@ export default function WordTools() {
     if (tab === 'unscramble') {
       const key = sortLetters(q)
       return words
-        .filter(w => sortLetters(w) === key)
+        .filter((w) => sortLetters(w) === key)
         .slice(0, 200)
-        .map(word => ({ word }))
+        .map((word) => ({ word }))
     }
 
     if (tab === 'anagram') {
@@ -76,22 +77,22 @@ export default function WordTools() {
       }
       partial.sort((a, b) => b.length - a.length || a.localeCompare(b))
       const out: Result[] = [
-        ...exact.map(word => ({ word, tag: 'exact' })),
-        ...partial.slice(0, 150).map(word => ({ word, tag: 'from letters' })),
+        ...exact.map((word) => ({ word, tag: 'exact' })),
+        ...partial.slice(0, 150).map((word) => ({ word, tag: 'from letters' })),
       ]
       return out.slice(0, 200)
     }
 
     if (tab === 'starts') {
-      return words.filter(w => w.startsWith(q)).slice(0, 200).map(word => ({ word }))
+      return words.filter((w) => w.startsWith(q)).slice(0, 200).map((word) => ({ word }))
     }
 
     if (tab === 'rhyme') {
       const end3 = q.length >= 3 ? q.slice(-3) : ''
       const end2 = q.length >= 2 ? q.slice(-2) : q
-      const primary = words.filter(w => w !== q && end3 && w.endsWith(end3))
-      const secondary = words.filter(w => w !== q && w.endsWith(end2) && !primary.includes(w))
-      return [...primary, ...secondary].slice(0, 200).map(word => ({ word }))
+      const primary = words.filter((w) => w !== q && end3 && w.endsWith(end3))
+      const secondary = words.filter((w) => w !== q && w.endsWith(end2) && !primary.includes(w))
+      return [...primary, ...secondary].slice(0, 200).map((word) => ({ word }))
     }
 
     return []
@@ -100,20 +101,36 @@ export default function WordTools() {
   const labels: Record<Tab, string> = {
     unscramble: 'Word Unscrambler',
     starts: 'Words that start with…',
-    anagram: 'Anagram Solver',
+    anagram: 'Anagram / Scrabble Finder',
     rhyme: 'Rhyme Finder',
   }
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10">
       <div className="text-center mb-8">
-        <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">Word Tools</h1>
-        <p className="text-slate-500 dark:text-slate-400">Unscramble, anagrams, prefixes and rhymes — all on your device.</p>
+        <h1 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-3">
+          Word Unscrambler Free — Unscramble Words &amp; Letters
+        </h1>
+        <p className="text-slate-500 dark:text-slate-400">
+          Private <strong>word unscrambler</strong>, <strong>word solver</strong>, and Scrabble-style finder — all on
+          your device, no ads.
+        </p>
         <p className="text-xs text-slate-400 mt-2">{dictLabel}</p>
+        <p className="text-xs text-slate-500 mt-3">
+          Prefer a daily puzzle? Try{' '}
+          <Link to="/tools/daily-scramble" className="text-indigo-600 hover:underline">
+            Daily Scramble
+          </Link>{' '}
+          or{' '}
+          <Link to="/tools/word-daily" className="text-indigo-600 hover:underline">
+            Word Daily
+          </Link>
+          .
+        </p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-4">
-        {(Object.keys(labels) as Tab[]).map(t => (
+        {(Object.keys(labels) as Tab[]).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
@@ -126,12 +143,15 @@ export default function WordTools() {
 
       <input
         value={query}
-        onChange={e => setQuery(e.target.value)}
+        onChange={(e) => setQuery(e.target.value)}
         placeholder={
-          tab === 'starts' ? 'Prefix (e.g. pre)'
-            : tab === 'rhyme' ? 'Word to rhyme (e.g. cat)'
-            : tab === 'anagram' ? 'Word or letters (e.g. listen)'
-            : 'Scrambled letters (e.g. etuc)'
+          tab === 'starts'
+            ? 'Prefix (e.g. pre)'
+            : tab === 'rhyme'
+              ? 'Word to rhyme (e.g. cat)'
+              : tab === 'anagram'
+                ? 'Word or letters (e.g. listen)'
+                : 'Scrambled letters (e.g. etuc)'
         }
         className="w-full p-3 rounded-xl border dark:bg-slate-800 dark:border-slate-600"
         disabled={busy}
@@ -153,13 +173,43 @@ export default function WordTools() {
           </span>
         ))}
         {!busy && query && results.length === 0 && (
-          <p className="text-sm text-slate-500">No matches. Try different letters, or deploy the full dictionary (see note below).</p>
+          <p className="text-sm text-slate-500">
+            No matches. Try different letters, or deploy the full dictionary (see note below).
+          </p>
         )}
       </div>
 
       <p className="mt-8 text-xs text-slate-400 text-center">
         Dictionary loads once from this site and can be cached in your browser. Nothing is uploaded.
       </p>
+
+      <section className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-700 text-sm text-slate-600 dark:text-slate-300 space-y-3 leading-relaxed">
+        <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-100">
+          How to unscramble words and letters online (privately)
+        </h2>
+        <p>
+          This page is a free <strong>word unscrambler</strong> and <strong>unscrambler</strong> for anyone who needs to{' '}
+          <strong>unscramble words</strong>, <strong>unscramble letters</strong>, or ask{' '}
+          <strong>what words can I make with these letters</strong>. Paste a jumble to <strong>unscramble</strong> exact
+          matches, or use the anagram tab as a lightweight <strong>scrabble word finder</strong> /{' '}
+          <strong>wordfinder</strong> that lists words you can form — useful when you want Scrabble help without a
+          sketchy <strong>scrabble cheat</strong> site.
+        </p>
+        <p>
+          Results come from a local dictionary (your private <strong>scrabble dictionary</strong>-style word list), so
+          lookups stay on your device. It also works as a <strong>word descrambler</strong>,{' '}
+          <strong>word scramble solver</strong>, and general <strong>word solver</strong> when you need to{' '}
+          <strong>unscramble letters to make words</strong>. Prefer a game instead of a solver? Play{' '}
+          <Link to="/tools/daily-scramble" className="text-indigo-600 hover:underline">
+            Daily Scramble
+          </Link>{' '}
+          (themed <strong>word scramble</strong>) or{' '}
+          <Link to="/tools/word-daily" className="text-indigo-600 hover:underline">
+            Word Daily
+          </Link>
+          .
+        </p>
+      </section>
     </div>
   )
 }

@@ -119,6 +119,12 @@ export default function WordToolsArticle() {
               — free daily five-letter word game
             </li>
             <li>
+              <Link to="/tools/daily-scramble" className="text-indigo-600 hover:underline font-medium">
+                Daily Scramble
+              </Link>{' '}
+              — themed daily <strong>word scramble</strong>
+            </li>
+            <li>
               <Link to="/all-tools" className="text-indigo-600 hover:underline font-medium">
                 All tools
               </Link>{' '}

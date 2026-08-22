@@ -36,6 +36,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pridocs.org/blog/daily-word-scramble-themed-puzzle</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pridocs.org/blog/free-word-tools-unscrambler-crossword-daily-puzzle</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -282,6 +287,11 @@
   </url>
   <url>
     <loc>https://pridocs.org/tools/word-daily</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/daily-scramble</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -10,14 +10,40 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'daily-word-scramble-themed-puzzle',
+    title: 'Daily Scramble: Free Themed Word Scramble Game (No Ads)',
+    description:
+      'Play Pridocs Daily Scramble — a free themed word scramble every day. Unscramble letters, keep your streak, or use the full word unscrambler.',
+    date: '2026-08-22',
+    dateLabel: 'August 22, 2026',
+    category: 'Word Games & Vocabulary',
+    keywords: [
+      'word scramble',
+      'word scrambler',
+      'unscramble words',
+      'word unscrambler',
+      'word scramble solver',
+      'daily word scramble',
+      'unscramble letters',
+    ],
+  },
+  {
     slug: 'free-word-tools-unscrambler-crossword-daily-puzzle',
     title: 'Free Word Tools Online: Unscrambler, Crossword Solver, Rhymes & Daily Word Game',
     description:
-      'Use Pridocs word unscrambler, anagram finder, rhyme finder, crossword solver, and Word Daily — free, private, no ads.',
+      'Use Pridocs word unscrambler, anagram finder, rhyme finder, crossword solver, Word Daily, and Daily Scramble — free, private, no ads.',
     date: '2026-08-11',
     dateLabel: 'August 11, 2026',
     category: 'Word Games & Vocabulary',
-    keywords: ['word unscrambler', 'crossword solver', 'rhyme finder', 'daily word game', 'wordle alternative'],
+    keywords: [
+      'word unscrambler',
+      'unscramble words',
+      'crossword solver',
+      'word scramble',
+      'daily word game',
+      'scrabble word finder',
+      'word solver',
+    ],
   },
   {
     slug: 'free-ai-background-remover-no-upload',

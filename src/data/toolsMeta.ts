@@ -183,12 +183,16 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     description: "Calculate loan EMI, total interest and payments in your browser. Private and free."
   },
   "word-tools": {
-    title: "Word Unscrambler, Anagram & Rhyme Finder | Pridocs",
-    description: "Unscramble letters, find anagrams, prefixes and rhymes on your device."
+    title: "Word Unscrambler Free — Unscramble Words & Letters | Pridocs",
+    description: "Free word unscrambler and word solver: unscramble words, unscramble letters to make words, Scrabble word finder, and word descrambler — private, no ads."
   },
   "crossword-solver": {
     title: "Crossword Solver Online - Pattern Matcher | Pridocs",
     description: "Solve crossword clues with letter patterns. Runs offline in your browser."
+  },
+  "daily-scramble": {
+    title: "Daily Scramble — Free Themed Word Scramble Game | Pridocs",
+    description: "Play a free daily word scramble: unscramble letters for today's theme, keep your streak, and share your result. No ads, no account — private in your browser."
   },
   "meme-generator": {
     title: "Free Meme Generator - No Watermark | Pridocs",
@@ -224,7 +228,7 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
   },
   "word-daily": {
     title: "Word Daily - Free Daily Word Puzzle Game | Pridocs",
-    description: "A new 5-letter word puzzle every day, free and ad-free. Guess in 6 tries, build your streak, and share your result. No account needed."
+    description: "A new 5-letter word puzzle every day, free and ad-free. Guess in 6 tries, build your streak, and share your result. No account needed. Also try Daily Scramble for a themed word scramble."
   },
   "random-list": {
     title: "Random List Generator & Picker Online | Pridocs",

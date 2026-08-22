@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Delete, CornerDownLeft, HelpCircle, X, Flame, Share2, Check } from 'lucide-react'
 import { WORD_DAILY_LIST } from '../data/wordDailyList'
 import { cn } from '../lib/utils'
@@ -307,7 +308,11 @@ export default function WordDaily({ embedded = false }: WordDailyProps) {
           <p className="text-slate-500 dark:text-slate-400 text-sm">A new 5-letter word every day. Free, private, no account — your streak lives only in this browser.</p>
           <p className="mt-2 text-xs text-slate-400">
             Come back tomorrow for a new daily word puzzle. Tip: pin this tab in your browser or bookmark pridocs.org
-            so Word Daily is always one click away.
+            so Word Daily is always one click away. Want a scramble instead? Try{' '}
+            <Link to="/tools/daily-scramble" className="text-indigo-600 hover:underline">
+              Daily Scramble
+            </Link>
+            .
           </p>
         </div>
       )}
