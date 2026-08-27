@@ -83,11 +83,15 @@ export default function PaymentButton() {
     }
   }, [containerId])
 
+  // Do not put `display:flex` on the PayPal mount node — it collapses the
+  // hosted button and stacks label text one character per line.
   return (
-    <div
-      id={containerId}
-      className="flex justify-center min-h-[45px]"
-      aria-label="Support Pridocs with PayPal"
-    />
+    <div className="w-full flex justify-center">
+      <div
+        id={containerId}
+        className="w-full max-w-sm min-h-[45px] text-left"
+        aria-label="Support Pridocs with PayPal"
+      />
+    </div>
   )
 }
