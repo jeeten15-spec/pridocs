@@ -246,6 +246,10 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     title: "Audio Trimmer Online - Cut & Fade Audio Locally | Pridocs",
     description: "Trim and fade audio tracks privately in your browser. No uploads required."
   },
+  "audio-merger": {
+    title: "Merge MP3 / Join Audio Files Online with Crossfade | Pridocs",
+    description: "Combine two or more MP3, WAV, or other audio files into one track with optional crossfade. Free, private, no upload."
+  },
   "exif-remover": {
     title: "EXIF Metadata Remover - Strip GPS from Photos | Pridocs",
     description: "Remove EXIF, GPS and camera metadata from photos by re-encoding locally. Free and private."
