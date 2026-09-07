@@ -4,6 +4,7 @@ import { getBlogPost } from '../data/blogPosts'
 import PaymentButton from '../components/PaymentButton'
 import WordToolsArticle from '../content/blog/WordToolsArticle'
 import DailyScrambleArticle from '../content/blog/DailyScrambleArticle'
+import HeicToJpgArticle from '../content/blog/HeicToJpgArticle'
 import BackgroundRemoverArticle from '../content/blog/BackgroundRemoverArticle'
 import CompressImagesArticle from '../content/blog/CompressImagesArticle'
 import PrivacyConvertersArticle from '../content/blog/PrivacyConvertersArticle'
@@ -12,6 +13,7 @@ const SITE = 'https://pridocs.org'
 const DEFAULT_TITLE = 'Pridocs | Free, Secure & Ad-Free Document and Media Converter'
 
 const bodies: Record<string, () => React.ReactElement> = {
+  'heic-to-jpg-free-no-upload-private': () => <HeicToJpgArticle />,
   'daily-word-scramble-themed-puzzle': () => <DailyScrambleArticle />,
   'free-word-tools-unscrambler-crossword-daily-puzzle': () => <WordToolsArticle />,
   'free-ai-background-remover-no-upload': () => <BackgroundRemoverArticle />,

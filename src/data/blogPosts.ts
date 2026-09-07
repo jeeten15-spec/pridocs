@@ -10,6 +10,25 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'heic-to-jpg-free-no-upload-private',
+    title: 'Convert HEIC to JPG Free Without Uploading — Private iPhone Photo Converter (2026)',
+    description:
+      'Convert iPhone HEIC photos to JPG in your browser — free, no upload, no watermark. Plus related private tools for compress, EXIF strip, and JPG to PDF.',
+    date: '2026-09-06',
+    dateLabel: 'September 6, 2026',
+    category: 'Image Tools',
+    keywords: [
+      'heic to jpg',
+      'heic to jpg converter',
+      'heic to jpg free',
+      'convert heic to jpg online',
+      'heic to jpg no upload',
+      'iphone heic to jpg',
+      'private heic converter',
+      'heic to png',
+    ],
+  },
+  {
     slug: 'daily-word-scramble-themed-puzzle',
     title: 'Daily Scramble: Free Themed Word Scramble Game (No Ads)',
     description:
