@@ -36,6 +36,36 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pridocs.org/blog/compress-pdf-under-1mb-no-signup</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/remove-background-no-signup-files-stay-on-device</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/merge-pdf-in-browser-no-server</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/pdf-to-word-without-uploading</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/pridocs-vs-smallpdf-vs-adobe-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/why-in-browser-converters-safer-id-scans</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pridocs.org/blog/heic-to-jpg-free-no-upload-private</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

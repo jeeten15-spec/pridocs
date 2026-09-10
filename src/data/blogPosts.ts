@@ -10,22 +10,119 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'compress-pdf-under-1mb-no-signup',
+    title: 'Compress PDF Under 1 MB — Free, No Signup, No Upload (2026)',
+    description:
+      'Compress PDF under 1MB or 200KB for email and government portals. Private SmallPDF alternative — files stay in your browser.',
+    date: '2026-09-10',
+    dateLabel: 'September 10, 2026',
+    category: 'PDF Tools',
+    keywords: [
+      'compress pdf under 1mb',
+      'compress pdf under 1mb no signup',
+      'compress pdf for email',
+      'compress pdf 200kb',
+      'compress scanned pdf for government portal',
+      'smallpdf alternative',
+    ],
+  },
+  {
+    slug: 'remove-background-no-signup-files-stay-on-device',
+    title: 'Remove Background Online — No Signup, Files Stay on Device',
+    description:
+      'Remove.bg / PhotoRoom / Canva alternative: AI background remover with transparent PNG, no watermark, no signup — processing stays in your browser.',
+    date: '2026-09-10',
+    dateLabel: 'September 10, 2026',
+    category: 'Image Tools',
+    keywords: [
+      'remove background from image',
+      'background remover no signup',
+      'remove.bg alternative',
+      'photoroom alternative',
+      'remove background online files stay on device',
+      'transparent background png',
+    ],
+  },
+  {
+    slug: 'merge-pdf-in-browser-no-server',
+    title: 'Merge PDF in Your Browser — Combine Files with No Server Upload',
+    description:
+      'Merge PDF no upload: combine PDF files locally. Free iLovePDF alternative that never sends documents to a server.',
+    date: '2026-09-10',
+    dateLabel: 'September 10, 2026',
+    category: 'PDF Tools',
+    keywords: [
+      'merge pdf',
+      'combine pdf files',
+      'merge pdf no upload',
+      'merge pdf in browser no server',
+      'ilovepdf alternative',
+    ],
+  },
+  {
+    slug: 'pdf-to-word-without-uploading',
+    title: 'PDF to Word Without Uploading — Private DOCX Converter',
+    description:
+      'Convert PDF to Word / DOCX without a server. Free private Adobe Acrobat online alternative for text PDFs.',
+    date: '2026-09-10',
+    dateLabel: 'September 10, 2026',
+    category: 'Document Tools',
+    keywords: [
+      'pdf to word without uploading',
+      'pdf to word',
+      'pdf to docx',
+      'adobe acrobat online alternative',
+      'convert word to pdf no upload',
+    ],
+  },
+  {
+    slug: 'pridocs-vs-smallpdf-vs-adobe-2026',
+    title: 'Pridocs vs SmallPDF vs Adobe Acrobat (2026): Honest Comparison',
+    description:
+      'They have deeper features; Pridocs has no upload. An honest look at private file converters versus SmallPDF and Adobe.',
+    date: '2026-09-10',
+    dateLabel: 'September 10, 2026',
+    category: 'Privacy & Security',
+    keywords: [
+      'smallpdf alternative',
+      'ilovepdf alternative',
+      'adobe acrobat online',
+      'private file converter',
+      'adobe acrobat vs free pdf tools 2026',
+    ],
+  },
+  {
+    slug: 'why-in-browser-converters-safer-id-scans',
+    title: 'Why In-Browser Converters Are Safer for ID Scans and Contracts',
+    description:
+      'Files never uploaded: why browser-based converters protect ID scans, contracts, and sensitive PDFs better than cloud upload tools.',
+    date: '2026-09-10',
+    dateLabel: 'September 10, 2026',
+    category: 'Privacy & Security',
+    keywords: [
+      'private file converter',
+      'files never uploaded',
+      'best vpn for public wifi',
+      'secure online tools',
+      'no upload converter',
+    ],
+  },
+  {
     slug: 'heic-to-jpg-free-no-upload-private',
     title: 'Convert HEIC to JPG Free Without Uploading — Private iPhone Photo Converter (2026)',
     description:
-      'Convert iPhone HEIC photos to JPG in your browser — free, no upload, no watermark. Plus related private tools for compress, EXIF strip, and JPG to PDF.',
+      'HEIC to JPG no upload privacy: convert iPhone HEIC on Windows without iTunes. Free private converter — files stay on your device.',
     date: '2026-09-06',
     dateLabel: 'September 6, 2026',
     category: 'Image Tools',
     keywords: [
       'heic to jpg',
-      'heic to jpg converter',
-      'heic to jpg free',
+      'heic to jpg no upload privacy',
       'convert heic to jpg online',
-      'heic to jpg no upload',
-      'iphone heic to jpg',
-      'private heic converter',
-      'heic to png',
+      'heic to jpg without itunes',
+      'iphone photos to jpg',
+      'convert iphone heic on windows',
+      'heic to jpg free',
     ],
   },
   {
@@ -82,7 +179,7 @@ export const blogPosts: BlogPost[] = [
     date: '2026-07-26',
     dateLabel: 'July 26, 2026',
     category: 'Image Tools',
-    keywords: ['compress images', 'reduce image size', 'image compressor', 'compress jpg'],
+    keywords: ['compress images', 'reduce image size', 'image compressor', 'compress jpg', 'resize image to 50kb'],
   },
   {
     slug: 'stop-uploading-sensitive-files-to-online-converters',

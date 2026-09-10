@@ -8,11 +8,23 @@ import HeicToJpgArticle from '../content/blog/HeicToJpgArticle'
 import BackgroundRemoverArticle from '../content/blog/BackgroundRemoverArticle'
 import CompressImagesArticle from '../content/blog/CompressImagesArticle'
 import PrivacyConvertersArticle from '../content/blog/PrivacyConvertersArticle'
+import CompressPdfUnder1MbArticle from '../content/blog/CompressPdfUnder1MbArticle'
+import RemoveBgComparisonArticle from '../content/blog/RemoveBgComparisonArticle'
+import MergePdfBrowserArticle from '../content/blog/MergePdfBrowserArticle'
+import PdfToWordNoServerArticle from '../content/blog/PdfToWordNoServerArticle'
+import PridocsVsSmallpdfAdobeArticle from '../content/blog/PridocsVsSmallpdfAdobeArticle'
+import SaferInBrowserConvertersArticle from '../content/blog/SaferInBrowserConvertersArticle'
 
 const SITE = 'https://pridocs.org'
 const DEFAULT_TITLE = 'Pridocs | Free, Secure & Ad-Free Document and Media Converter'
 
 const bodies: Record<string, () => React.ReactElement> = {
+  'compress-pdf-under-1mb-no-signup': () => <CompressPdfUnder1MbArticle />,
+  'remove-background-no-signup-files-stay-on-device': () => <RemoveBgComparisonArticle />,
+  'merge-pdf-in-browser-no-server': () => <MergePdfBrowserArticle />,
+  'pdf-to-word-without-uploading': () => <PdfToWordNoServerArticle />,
+  'pridocs-vs-smallpdf-vs-adobe-2026': () => <PridocsVsSmallpdfAdobeArticle />,
+  'why-in-browser-converters-safer-id-scans': () => <SaferInBrowserConvertersArticle />,
   'heic-to-jpg-free-no-upload-private': () => <HeicToJpgArticle />,
   'daily-word-scramble-themed-puzzle': () => <DailyScrambleArticle />,
   'free-word-tools-unscrambler-crossword-daily-puzzle': () => <WordToolsArticle />,

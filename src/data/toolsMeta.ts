@@ -1,23 +1,35 @@
 export const toolsMeta: Record<string, { title: string; description: string }> = {
   "pdf-to-jpg": {
-    title: "Free PDF to JPG Converter Online - 100% Private | Pridocs",
-    description: "Convert PDF pages to high-quality JPG images entirely in your browser. Free, secure, ad-free, and no signup required. Your data never leaves your computer."
+    title: "PDF to JPG Online — Extract Images from PDF in Browser | Pridocs",
+    description: "Convert PDF pages to JPG without uploading. Free private PDF to JPG / PNG extraction — an iLovePDF alternative that keeps files on your device."
+  },
+  "merge-pdf": {
+    title: "Merge PDF in Browser — Combine PDF Files, No Server | Pridocs",
+    description: "Merge PDF with no upload: combine PDF files locally in your browser. Free iLovePDF / SmallPDF alternative — files never leave your device."
+  },
+  "compress-pdf": {
+    title: "Compress PDF Under 1 MB — No Signup, Free Online | Pridocs",
+    description: "Compress PDF under 1MB, 200KB, or for email. Private SmallPDF alternative for scanned PDFs and government portals — no upload, no account."
+  },
+  "docx-to-pdf": {
+    title: "Word to PDF Online — Convert DOCX with No Upload | Pridocs",
+    description: "Convert Word to PDF / DOCX to PDF online without uploading. Free private browser converter for Office workflows."
+  },
+  "pdf-to-docx": {
+    title: "PDF to Word Without Uploading — Free Private Converter | Pridocs",
+    description: "Convert PDF to Word / DOCX without a server. Extract editable text locally — a private Adobe Acrobat online alternative."
+  },
+  "image-resize": {
+    title: "Compress JPG for Web — Resize Image to 50KB / 20KB | Pridocs",
+    description: "Image compressor online: resize image to 50KB or 20KB for forms and portals. Free, private, no upload."
   },
   "pdf-to-png": {
     title: "Free PDF to PNG Converter Online - Transparent & Secure | Pridocs",
     description: "Convert PDF pages to transparent PNG images safely inside your browser. Enjoy a 100% private file conversion experience with zero ads or tracking."
   },
-  "merge-pdf": {
-    title: "Merge PDF Files Online - Combine PDFs Locally | Pridocs",
-    description: "Combine multiple PDF files into one document. Drag, drop, and reorder pages securely on your local device. Free, private, and ad-free PDF merger."
-  },
   "split-pdf": {
     title: "Split PDF Online - Extract PDF Pages Locally | Pridocs",
     description: "Extract pages or split a PDF file into multiple separate documents. Safe browser-side processing ensures your confidential files remain completely private."
-  },
-  "compress-pdf": {
-    title: "Compress PDF Size Online - Reduce PDF MB Safely | Pridocs",
-    description: "Reduce PDF file size while keeping excellent visual quality. Compress your documents safely inside your web browser without uploading files to remote servers."
   },
   "rotate-pdf": {
     title: "Rotate PDF Pages Online - Free Page Rotator | Pridocs",
@@ -70,10 +82,6 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
   "png-to-jpg": {
     title: "PNG to JPG Converter Online - Smaller File Weights | Pridocs",
     description: "Convert bulky PNG images to compact JPG files online. Local device image transformation means no data leaks and immediate processing speeds."
-  },
-  "image-resize": {
-    title: "Image Resizer & Compressor Online - Free Bulk Tool | Pridocs",
-    description: "Resize and compress images locally inside your browser. Save storage space and optimize images safely without losing crisp resolution."
   },
   "image-to-webp": {
     title: "Image to WebP Converter Online - Modern Web Formats | Pridocs",
@@ -152,15 +160,6 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     description: "Convert short MP4 clips to GIF entirely in your browser. Free, private, no upload."
   },
 
-  "docx-to-pdf": {
-    title: "DOCX to PDF Converter Online - Free & Private | Pridocs",
-    description: "Convert Microsoft Word DOCX documents to PDF entirely in your browser. Free, secure, ad-free, and no signup required. Your data never leaves your computer."
-  },
-  "pdf-to-docx": {
-    title: "PDF to DOCX Converter Online - Free Editable Word | Pridocs",
-    description: "Convert PDF to editable Word DOCX documents safely inside your browser. Extract text locally with zero server uploads and zero tracking."
-  },
-
   "audio-converter": {
     title: "Audio Converter Online - WAV to MP3, MP3 to WAV | Pridocs",
     description: "Convert audio files between MP3, WAV, AAC, OGG and FLAC entirely in your browser. Free, private, no upload."
@@ -215,16 +214,16 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     description: "Simple Pomodoro focus and break timer. No account, fully private."
   },
   "background-remover": {
-    title: "Free AI Background Remover - Unlimited & Private | Pridocs",
-    description: "Remove the background from any photo using an on-device AI model — free, unlimited, no watermark, no account. Your photos never leave your device."
+    title: "Remove Background Online — No Signup, Files Stay on Device | Pridocs",
+    description: "Remove.bg / PhotoRoom / Canva alternative: AI background remover with transparent PNG, no watermark, no signup. Processing stays in your browser."
   },
   "images-to-pdf": {
     title: "JPG & PNG to PDF Converter - Free & Private | Pridocs",
     description: "Combine multiple photos into a single PDF document entirely in your browser. Free, ad-free, and your images never leave your device."
   },
   "image-to-text": {
-    title: "Image to Text Converter (Free OCR) - No Upload | Pridocs",
-    description: "Extract text from photos and screenshots using on-device OCR. Free, private and ad-free — your images never leave your device."
+    title: "Image to Text OCR — Extract Text, Adobe Scan Alternative | Pridocs",
+    description: "OCR image to text and handwriting to text in your browser. Private Microsoft Lens / Adobe Scan alternative — no upload."
   },
   "word-daily": {
     title: "Word Daily - Free Daily Word Puzzle Game | Pridocs",
@@ -239,8 +238,8 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     description: "Convert length, weight, temperature and digital storage units instantly. Free, private, and ad-free unit converter."
   },
   "heic-to-jpg": {
-    title: "Free HEIC to JPG Converter Online - 100% Private | Pridocs",
-    description: "Convert iPhone HEIC/HEIF photos to JPG entirely in your browser. Free, private, ad-free, and no signup required. Your photos never leave your device."
+    title: "HEIC to JPG No Upload — Convert iPhone Photos on Windows | Pridocs",
+    description: "HEIC to JPG without iTunes: convert iPhone HEIC on Windows privately in your browser. Free, no upload, no signup — privacy-first photo converter."
   },
   "audio-trimmer": {
     title: "Audio Trimmer Online - Cut & Fade Audio Locally | Pridocs",
