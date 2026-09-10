@@ -19,13 +19,12 @@ export default function CompressPdfUnder1MbArticle() {
       </p>
 
       <h2 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">
-        Why &quot;compress PDF under 1 MB&quot; is the phrase that pays
+        Why compressing PDF under 1 MB matters
       </h2>
       <p>
-        Head terms like &quot;compress pdf&quot; are owned by Adobe, SmallPDF, and iLovePDF for now. Long-tails win
-        earlier: <strong>compress pdf under 1mb no signup</strong>, <strong>compress pdf 200kb</strong>,{' '}
-        <strong>compress scanned PDF for government portal</strong>. Those searchers already know their pain. Meet them
-        with a tool that solves the size limit without creating a new privacy problem.
+        People searching for <strong>compress pdf under 1mb no signup</strong>, <strong>compress pdf 200kb</strong>, or{' '}
+        <strong>compress scanned PDF for government portal</strong> already know their pain. Meet them with a tool that
+        solves the size limit without creating a new privacy problem.
       </p>
 
       <h2 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">How Pridocs hits email and portal limits</h2>
