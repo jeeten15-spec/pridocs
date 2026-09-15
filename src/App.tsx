@@ -45,6 +45,7 @@ import ImageFilters from './tools/ImageFilters'
 import VideoToGif from './tools/VideoToGif'
 import AudioTrimmer from './tools/AudioTrimmer'
 import AudioMerger from './tools/AudioMerger'
+import InternalAudioRecorder from './tools/InternalAudioRecorder'
 import PdfWatermark from './tools/PdfWatermark'
 import PdfPageNumbers from './tools/PdfPageNumbers'
 import RedactPdf from './tools/RedactPdf'
@@ -123,6 +124,7 @@ export default function App() {
       <Route path="/tools/video-to-gif" element={<ToolLayout><VideoToGif /></ToolLayout>} />
       <Route path="/tools/audio-trimmer" element={<ToolLayout><AudioTrimmer /></ToolLayout>} />
       <Route path="/tools/audio-merger" element={<ToolLayout><AudioMerger /></ToolLayout>} />
+      <Route path="/tools/internal-audio-recorder" element={<ToolLayout><InternalAudioRecorder /></ToolLayout>} />
 
       {/* Image Tools */}
       <Route path="/tools/jpg-to-png" element={<ToolLayout><JpgToPng /></ToolLayout>} />

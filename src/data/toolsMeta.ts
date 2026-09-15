@@ -249,6 +249,10 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     title: "Merge MP3 / Join Audio Files Online with Crossfade | Pridocs",
     description: "Combine two or more MP3, WAV, or other audio files into one track with optional crossfade. Free, private, no upload."
   },
+  "internal-audio-recorder": {
+    title: "Internal Audio Recorder — Record System Sound (WASAPI Loopback) | Pridocs",
+    description: "Free browser recorder for internal PC audio. Pick a loopback device on Windows or share tab/system audio. No upload, full quality."
+  },
   "exif-remover": {
     title: "EXIF Metadata Remover - Strip GPS from Photos | Pridocs",
     description: "Remove EXIF, GPS and camera metadata from photos by re-encoding locally. Free and private."

@@ -14,11 +14,13 @@ import MergePdfBrowserArticle from '../content/blog/MergePdfBrowserArticle'
 import PdfToWordNoServerArticle from '../content/blog/PdfToWordNoServerArticle'
 import PridocsVsSmallpdfAdobeArticle from '../content/blog/PridocsVsSmallpdfAdobeArticle'
 import SaferInBrowserConvertersArticle from '../content/blog/SaferInBrowserConvertersArticle'
+import RecordSystemAudioArticle from '../content/blog/RecordSystemAudioArticle'
 
 const SITE = 'https://pridocs.org'
 const DEFAULT_TITLE = 'Pridocs | Free, Secure & Ad-Free Document and Media Converter'
 
 const bodies: Record<string, () => React.ReactElement> = {
+  'record-system-audio-online-wasapi-loopback': () => <RecordSystemAudioArticle />,
   'compress-pdf-under-1mb-no-signup': () => <CompressPdfUnder1MbArticle />,
   'remove-background-no-signup-files-stay-on-device': () => <RemoveBgComparisonArticle />,
   'merge-pdf-in-browser-no-server': () => <MergePdfBrowserArticle />,

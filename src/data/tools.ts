@@ -801,6 +801,26 @@ export const tools: Tool[] = [
     phase: 1,
   },
   {
+    id: 'internal-audio-recorder',
+    name: 'Internal Audio Recorder',
+    shortName: 'System Audio Recorder',
+    description:
+      'Record internal PC audio with loopback device or tab/system audio share. Free, private, browser-only — no upload.',
+    path: '/tools/internal-audio-recorder',
+    category: 'audio',
+    keywords: [
+      'record system audio',
+      'internal audio recorder',
+      'wasapi loopback',
+      'record computer sound',
+      'capture tab audio',
+      'stereo mix recorder',
+      'record internal audio online',
+    ],
+    icon: 'Mic',
+    phase: 1,
+  },
+  {
     id: 'exif-remover',
     name: 'EXIF / Metadata Remover',
     shortName: 'EXIF Remover',

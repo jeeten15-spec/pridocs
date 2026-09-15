@@ -10,6 +10,25 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'record-system-audio-online-wasapi-loopback',
+    title: 'Record System Audio Online — Free WASAPI Loopback Alternative (2026)',
+    description:
+      'Record internal PC audio in your browser: loopback device or tab/system audio share. Free Audacity-style recorder — no upload, no install.',
+    date: '2026-09-15',
+    dateLabel: 'September 15, 2026',
+    category: 'Audio Tools',
+    keywords: [
+      'record system audio',
+      'internal audio recorder',
+      'record computer sound',
+      'wasapi loopback',
+      'capture tab audio',
+      'stereo mix recorder',
+      'record internal audio online',
+      'record system audio without audacity',
+    ],
+  },
+  {
     slug: 'compress-pdf-under-1mb-no-signup',
     title: 'Compress PDF Under 1 MB — Free, No Signup, No Upload (2026)',
     description:
