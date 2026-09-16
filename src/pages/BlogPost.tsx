@@ -22,11 +22,23 @@ import NormalizeAudioLouderArticle from '../content/blog/NormalizeAudioLouderArt
 import ChangeAudioSpeedArticle from '../content/blog/ChangeAudioSpeedArticle'
 import TrimVideoNoUploadArticle from '../content/blog/TrimVideoNoUploadArticle'
 import CompressVideoEmailArticle from '../content/blog/CompressVideoEmailArticle'
+import NoiseReducerArticle from '../content/blog/NoiseReducerArticle'
+import AddAudioToVideoArticle from '../content/blog/AddAudioToVideoArticle'
+import WaveformSpectrumArticle from '../content/blog/WaveformSpectrumArticle'
+import AudioEffectsBrowserArticle from '../content/blog/AudioEffectsBrowserArticle'
+import MergeVideosArticle from '../content/blog/MergeVideosArticle'
+import LocalWhisperArticle from '../content/blog/LocalWhisperArticle'
 
 const SITE = 'https://pridocs.org'
 const DEFAULT_TITLE = 'Pridocs | Free, Secure & Ad-Free Document and Media Converter'
 
 const bodies: Record<string, () => React.ReactElement> = {
+  'noise-reducer-remove-hiss-hum-free': () => <NoiseReducerArticle />,
+  'add-audio-to-video-replace-soundtrack': () => <AddAudioToVideoArticle />,
+  'waveform-spectrum-analyzer-online': () => <WaveformSpectrumArticle />,
+  'audio-compressor-eq-effects-browser': () => <AudioEffectsBrowserArticle />,
+  'merge-videos-add-audio-browser': () => <MergeVideosArticle />,
+  'local-whisper-transcription-no-upload': () => <LocalWhisperArticle />,
   'browser-audio-video-editing-no-upload-2026': () => <BrowserAudioEditingHubArticle />,
   'trim-mp3-online-no-upload-free': () => <TrimMp3NoUploadArticle />,
   'remove-silence-from-audio-free': () => <RemoveSilenceAudioArticle />,

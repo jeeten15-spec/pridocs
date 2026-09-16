@@ -83,7 +83,12 @@ export default function SpeechToText() {
 
       <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
         Speech recognition is provided by your browser/OS. Some browsers send audio to the vendor for transcription —
-        choose a local voice/engine when available, or use this only for non-sensitive dictation.
+        choose a local voice/engine when available, or use this only for non-sensitive dictation. For private file
+        transcription, try{' '}
+        <a href="/tools/local-whisper" className="underline font-medium">
+          Local Whisper
+        </a>
+        .
       </div>
 
       {!supported ? (

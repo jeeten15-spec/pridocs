@@ -10,6 +10,72 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'noise-reducer-remove-hiss-hum-free',
+    title: 'Remove Hiss & Hum Online Free — Private Noise Reducer (2026)',
+    description:
+      'Reduce tape hiss, electrical hum, and background noise in your browser. Free Audacity-style noise reducer — no upload.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['noise reducer', 'remove hiss from audio', 'remove hum', 'denoise audio online', 'noise reduction free'],
+  },
+  {
+    slug: 'add-audio-to-video-replace-soundtrack',
+    title: 'Add Audio to Video Online — Replace Soundtrack Free, No Upload',
+    description:
+      'Replace or mix a new audio track onto MP4. Free private add-audio-to-video tool — no watermark.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['add audio to video', 'replace audio track', 'change video soundtrack', 'mix music with video'],
+  },
+  {
+    slug: 'waveform-spectrum-analyzer-online',
+    title: 'Waveform & Spectrum Analyzer Online — Loudness Meter Free',
+    description:
+      'View waveform, frequency spectrum, peak and RMS loudness privately. Free audio analyzer — no upload.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['waveform viewer', 'spectrum analyzer online', 'loudness meter', 'analyze audio free'],
+  },
+  {
+    slug: 'audio-compressor-eq-effects-browser',
+    title: 'Audio Compressor & EQ Online — Effects Without Uploading',
+    description:
+      'Compress dynamics, EQ bass/treble, fade, reverse, and split audio in your browser. Private Audacity-style effects.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['audio compressor online', 'audio eq free', 'fade in fade out', 'reverse mp3', 'split audio'],
+  },
+  {
+    slug: 'merge-videos-add-audio-browser',
+    title: 'Merge Videos & Add Audio Online — Private Video Toolkit',
+    description:
+      'Join MP4 clips and attach soundtracks without uploading. Free browser video merge and audio-replace tools.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['merge videos online', 'combine mp4', 'join video clips', 'add audio to video no upload'],
+  },
+  {
+    slug: 'local-whisper-transcription-no-upload',
+    title: 'Local Whisper Transcription — Speech to Text That Never Uploads',
+    description:
+      'Run Whisper in your browser (WASM/ONNX) to transcribe audio privately. Optional AI — model downloads once, audio stays local.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: [
+      'whisper transcription browser',
+      'local whisper',
+      'transcribe audio no upload',
+      'offline speech to text',
+      'whisper wasm',
+    ],
+  },
+  {
     slug: 'browser-audio-video-editing-no-upload-2026',
     title: 'Browser Audio & Video Editing (2026) — Trim, Normalize, Compress Without Upload',
     description:

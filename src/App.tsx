@@ -51,6 +51,16 @@ import AudioNormalizer from './tools/AudioNormalizer'
 import AudioSpeedChanger from './tools/AudioSpeedChanger'
 import VideoTrimmer from './tools/VideoTrimmer'
 import VideoCompressor from './tools/VideoCompressor'
+import NoiseReducer from './tools/NoiseReducer'
+import ReverseAudio from './tools/ReverseAudio'
+import SplitAudio from './tools/SplitAudio'
+import AudioEQ from './tools/AudioEQ'
+import AudioCompressor from './tools/AudioCompressor'
+import AudioFader from './tools/AudioFader'
+import AudioAnalyzer from './tools/AudioAnalyzer'
+import AddAudioToVideo from './tools/AddAudioToVideo'
+import MergeVideos from './tools/MergeVideos'
+import LocalWhisper from './tools/LocalWhisper'
 import PdfWatermark from './tools/PdfWatermark'
 import PdfPageNumbers from './tools/PdfPageNumbers'
 import RedactPdf from './tools/RedactPdf'
@@ -135,6 +145,16 @@ export default function App() {
       <Route path="/tools/audio-speed-changer" element={<ToolLayout><AudioSpeedChanger /></ToolLayout>} />
       <Route path="/tools/video-trimmer" element={<ToolLayout><VideoTrimmer /></ToolLayout>} />
       <Route path="/tools/video-compressor" element={<ToolLayout><VideoCompressor /></ToolLayout>} />
+      <Route path="/tools/noise-reducer" element={<ToolLayout><NoiseReducer /></ToolLayout>} />
+      <Route path="/tools/reverse-audio" element={<ToolLayout><ReverseAudio /></ToolLayout>} />
+      <Route path="/tools/split-audio" element={<ToolLayout><SplitAudio /></ToolLayout>} />
+      <Route path="/tools/audio-eq" element={<ToolLayout><AudioEQ /></ToolLayout>} />
+      <Route path="/tools/audio-compressor" element={<ToolLayout><AudioCompressor /></ToolLayout>} />
+      <Route path="/tools/audio-fader" element={<ToolLayout><AudioFader /></ToolLayout>} />
+      <Route path="/tools/audio-analyzer" element={<ToolLayout><AudioAnalyzer /></ToolLayout>} />
+      <Route path="/tools/add-audio-to-video" element={<ToolLayout><AddAudioToVideo /></ToolLayout>} />
+      <Route path="/tools/merge-videos" element={<ToolLayout><MergeVideos /></ToolLayout>} />
+      <Route path="/tools/local-whisper" element={<ToolLayout><LocalWhisper /></ToolLayout>} />
 
       {/* Image Tools */}
       <Route path="/tools/jpg-to-png" element={<ToolLayout><JpgToPng /></ToolLayout>} />

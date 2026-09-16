@@ -161,8 +161,8 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
   },
 
   "audio-converter": {
-    title: "Audio Converter Online - WAV to MP3, MP3 to WAV | Pridocs",
-    description: "Convert audio files between MP3, WAV, AAC, OGG and FLAC entirely in your browser. Free, private, no upload."
+    title: "Audio Converter Online — MP3, WAV, AAC, FLAC, Opus | Pridocs",
+    description: "Convert audio with bitrate presets (96–320 kbps) including Opus. Free private converter — no upload."
   },
   "video-to-mp3": {
     title: "Video to MP3 Converter Online - Extract Audio | Pridocs",
@@ -264,6 +264,46 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
   "video-compressor": {
     title: "Compress Video Online Free — Shrink MP4 for Email | Pridocs",
     description: "Reduce MP4 file size for email and WhatsApp. Free private video compressor — runs in your browser, no upload."
+  },
+  "noise-reducer": {
+    title: "Noise Reducer Online — Remove Hiss & Hum Free | Pridocs",
+    description: "Reduce hiss, hum, and background noise from recordings. Free private noise reducer — no upload."
+  },
+  "reverse-audio": {
+    title: "Reverse Audio Online Free — Play MP3 Backwards | Pridocs",
+    description: "Reverse MP3 and WAV tracks in your browser. Free reverse audio tool — private, no upload."
+  },
+  "split-audio": {
+    title: "Split Audio Online Free — Split MP3 at Silence | Pridocs",
+    description: "Split long audio into parts at silence or fixed intervals. Free private splitter — download ZIP, no upload."
+  },
+  "audio-eq": {
+    title: "Audio EQ Online Free — Bass Treble Equalizer | Pridocs",
+    description: "Simple bass/mid/treble EQ plus high-pass and low-pass filters. Free private equalizer — no upload."
+  },
+  "audio-compressor": {
+    title: "Audio Compressor Online — Dynamics for Podcasts | Pridocs",
+    description: "Compress audio dynamics to even out loud and quiet parts. Free private compressor — no upload."
+  },
+  "audio-fader": {
+    title: "Fade In Fade Out Audio Online Free | Pridocs",
+    description: "Add smooth fade-in and fade-out to MP3/WAV. Free private audio fader — no upload."
+  },
+  "audio-analyzer": {
+    title: "Waveform & Spectrum Analyzer Online Free | Pridocs",
+    description: "View waveform, frequency spectrum, peak and RMS loudness. Free private audio analyzer — no upload."
+  },
+  "add-audio-to-video": {
+    title: "Add Audio to Video Online — Replace Soundtrack Free | Pridocs",
+    description: "Replace or mix a new audio track onto video. Free private tool — no upload, no watermark."
+  },
+  "merge-videos": {
+    title: "Merge Videos Online Free — Combine MP4 Clips | Pridocs",
+    description: "Join multiple video clips into one MP4. Free private video merger — no upload."
+  },
+  "local-whisper": {
+    title: "Local Whisper Transcription — Speech to Text No Upload | Pridocs",
+    description: "Transcribe audio with Whisper running in your browser. Optional WASM AI — files stay on your device."
   },
   "audio-merger": {
     title: "Merge MP3 / Join Audio Files Online with Crossfade | Pridocs",

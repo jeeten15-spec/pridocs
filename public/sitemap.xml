@@ -36,6 +36,36 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pridocs.org/blog/noise-reducer-remove-hiss-hum-free</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/add-audio-to-video-replace-soundtrack</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/waveform-spectrum-analyzer-online</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/audio-compressor-eq-effects-browser</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/merge-videos-add-audio-browser</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/local-whisper-transcription-no-upload</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pridocs.org/blog/browser-audio-video-editing-no-upload-2026</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -462,6 +492,56 @@
   </url>
   <url>
     <loc>https://pridocs.org/tools/video-compressor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/noise-reducer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/reverse-audio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/split-audio</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/audio-eq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/audio-compressor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/audio-fader</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/audio-analyzer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/add-audio-to-video</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/merge-videos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/local-whisper</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
