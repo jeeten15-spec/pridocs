@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { Upload, Loader2, Copy, Check, Mic } from 'lucide-react'
+import { Loader2, Copy, Check, Mic } from 'lucide-react'
 import { cn, formatBytes } from '../lib/utils'
 
 const MAX_BYTES = 40 * 1024 * 1024
@@ -21,8 +21,29 @@ const MODELS: { id: ModelId; label: string; hub: string; note: string }[] = [
   },
 ]
 
+// Load from CDN so Cloudflare Pages never has to host 25+ MB ONNX WASM binaries.
+const TRANSFORMERS_CDN =
+  'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.1/dist/transformers.min.js'
+
+type TransformersMod = {
+  pipeline: (...args: any[]) => Promise<any>
+  env: {
+    allowLocalModels: boolean
+    useBrowserCache: boolean
+    backends?: { onnx?: { wasm?: { wasmPaths?: string } } }
+  }
+}
+
+let transformersPromise: Promise<TransformersMod> | null = null
+
+function loadTransformers(): Promise<TransformersMod> {
+  if (transformersPromise) return transformersPromise
+  transformersPromise = import(/* @vite-ignore */ TRANSFORMERS_CDN) as Promise<TransformersMod>
+  return transformersPromise
+}
+
 /**
- * Optional local Whisper transcription via Transformers.js (ONNX in-browser).
+ * Optional local Whisper transcription via Transformers.js from CDN (ONNX in-browser).
  * Model downloads once to the browser cache; audio stays on-device.
  */
 export default function LocalWhisper() {
@@ -39,8 +60,8 @@ export default function LocalWhisper() {
 
   const loadPipeline = async (hub: string) => {
     if (pipelineRef.current && loadedModelRef.current === hub) return pipelineRef.current
-    setStatus('Loading Transformers.js…')
-    const { pipeline, env } = await import('@huggingface/transformers')
+    setStatus('Loading Transformers.js (CDN)…')
+    const { pipeline, env } = await loadTransformers()
     env.allowLocalModels = false
     env.useBrowserCache = true
     setStatus(`Downloading Whisper model (${hub}) — first time only…`)
@@ -87,7 +108,7 @@ export default function LocalWhisper() {
       const msg = e instanceof Error ? e.message : 'Transcription failed'
       setError(
         msg.includes('Failed to fetch') || msg.includes('network')
-          ? 'Could not download the Whisper model. Check your connection and try again.'
+          ? 'Could not download Whisper/Transformers. Check your connection and try again.'
           : msg
       )
       setStatus('')
@@ -113,7 +134,7 @@ export default function LocalWhisper() {
       </div>
 
       <div className="mb-4 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900">
-        Unlike browser dictation, this path keeps audio on-device after the model is cached. First run downloads Whisper (~40–75 MB). Prefer short clips on phones; desktop works best.
+        Unlike browser dictation, this path keeps audio on-device after the model is cached. First run downloads Whisper (~40–75 MB) plus the Transformers.js engine from a public CDN. Prefer short clips on phones; desktop works best.
       </div>
 
       <div className="mb-4">

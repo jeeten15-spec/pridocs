@@ -1,12 +1,35 @@
-import { defineConfig } from 'vite'
+import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
+
+/** Cloudflare Pages rejects assets over 25 MiB — drop them before write. */
+function stripOversizedAssets(maxBytes = 25 * 1024 * 1024): Plugin {
+  return {
+    name: 'strip-oversized-assets',
+    generateBundle(_options, bundle) {
+      for (const [fileName, item] of Object.entries(bundle)) {
+        if (item.type !== 'asset' || item.source == null) continue
+        const size =
+          typeof item.source === 'string'
+            ? Buffer.byteLength(item.source)
+            : item.source.byteLength
+        if (size > maxBytes) {
+          delete bundle[fileName]
+          console.warn(
+            `[strip-oversized-assets] Excluded ${fileName} (${(size / 1024 / 1024).toFixed(1)} MiB > 25 MiB Pages limit)`
+          )
+        }
+      }
+    },
+  }
+}
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    stripOversizedAssets(),
     VitePWA({
       registerType: 'autoUpdate',
       // Registration is done manually in src/main.tsx via `virtual:pwa-register`,
