@@ -64,15 +64,11 @@ export default function RecordSystemAudioArticle() {
         People searching for <strong>record internal audio</strong>, <strong>capture tab audio</strong>,{' '}
         <strong>stereo mix recorder</strong>, or <strong>record computer sound without Audacity</strong> are tired of
         desk-mic bleed and missing playback. Loopback or tab audio share records the digital stream — clearer for
-        transcription, clips, and demos. After recording, trim or join files with{' '}
-        <Link to="/tools/audio-trimmer" className="text-indigo-600 hover:underline">
-          Audio Trimmer
-        </Link>{' '}
-        and{' '}
-        <Link to="/tools/audio-merger" className="text-indigo-600 hover:underline">
-          Merge Audio
+        transcription, clips, and demos.         After recording, use our full{' '}
+        <Link to="/blog/browser-audio-video-editing-no-upload-2026" className="text-indigo-600 hover:underline">
+          browser audio & video toolkit
         </Link>
-        .
+        {' '}— trim, remove silence, normalize, merge, and compress without uploading.
       </p>
 
       <h2 className="text-2xl font-semibold text-slate-900 mt-10 mb-4">Privacy: why local recording matters</h2>

@@ -46,6 +46,11 @@ import VideoToGif from './tools/VideoToGif'
 import AudioTrimmer from './tools/AudioTrimmer'
 import AudioMerger from './tools/AudioMerger'
 import InternalAudioRecorder from './tools/InternalAudioRecorder'
+import RemoveSilence from './tools/RemoveSilence'
+import AudioNormalizer from './tools/AudioNormalizer'
+import AudioSpeedChanger from './tools/AudioSpeedChanger'
+import VideoTrimmer from './tools/VideoTrimmer'
+import VideoCompressor from './tools/VideoCompressor'
 import PdfWatermark from './tools/PdfWatermark'
 import PdfPageNumbers from './tools/PdfPageNumbers'
 import RedactPdf from './tools/RedactPdf'
@@ -125,6 +130,11 @@ export default function App() {
       <Route path="/tools/audio-trimmer" element={<ToolLayout><AudioTrimmer /></ToolLayout>} />
       <Route path="/tools/audio-merger" element={<ToolLayout><AudioMerger /></ToolLayout>} />
       <Route path="/tools/internal-audio-recorder" element={<ToolLayout><InternalAudioRecorder /></ToolLayout>} />
+      <Route path="/tools/remove-silence" element={<ToolLayout><RemoveSilence /></ToolLayout>} />
+      <Route path="/tools/audio-normalizer" element={<ToolLayout><AudioNormalizer /></ToolLayout>} />
+      <Route path="/tools/audio-speed-changer" element={<ToolLayout><AudioSpeedChanger /></ToolLayout>} />
+      <Route path="/tools/video-trimmer" element={<ToolLayout><VideoTrimmer /></ToolLayout>} />
+      <Route path="/tools/video-compressor" element={<ToolLayout><VideoCompressor /></ToolLayout>} />
 
       {/* Image Tools */}
       <Route path="/tools/jpg-to-png" element={<ToolLayout><JpgToPng /></ToolLayout>} />

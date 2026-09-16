@@ -242,8 +242,28 @@ export const toolsMeta: Record<string, { title: string; description: string }> =
     description: "HEIC to JPG without iTunes: convert iPhone HEIC on Windows privately in your browser. Free, no upload, no signup — privacy-first photo converter."
   },
   "audio-trimmer": {
-    title: "Audio Trimmer Online - Cut & Fade Audio Locally | Pridocs",
-    description: "Trim and fade audio tracks privately in your browser. No uploads required."
+    title: "Trim MP3 Online Free — Cut Audio with Fade, No Upload | Pridocs",
+    description: "Cut MP3, WAV, and audio files with waveform preview and fade in/out. Free private audio trimmer — files never leave your device."
+  },
+  "remove-silence": {
+    title: "Remove Silence from Audio Free — Cut Dead Air, No Upload | Pridocs",
+    description: "Strip silence from podcasts and voice notes in your browser. Free truncate-silence tool — private, no signup."
+  },
+  "audio-normalizer": {
+    title: "Normalize Audio Online — Volume Booster for Quiet MP3s | Pridocs",
+    description: "Make quiet audio louder or balance podcast levels locally. Free audio normalizer — no upload, no watermark."
+  },
+  "audio-speed-changer": {
+    title: "Change Audio Speed Online — Speed Up or Slow Down MP3 | Pridocs",
+    description: "Speed up or slow down MP3/WAV in your browser. Change tempo without pitch or adjust both — free, private."
+  },
+  "video-trimmer": {
+    title: "Trim Video Online Free — Cut MP4 Without Uploading | Pridocs",
+    description: "Cut and trim MP4 videos privately in your browser. Free video trimmer — no watermark, no server upload."
+  },
+  "video-compressor": {
+    title: "Compress Video Online Free — Shrink MP4 for Email | Pridocs",
+    description: "Reduce MP4 file size for email and WhatsApp. Free private video compressor — runs in your browser, no upload."
   },
   "audio-merger": {
     title: "Merge MP3 / Join Audio Files Online with Crossfade | Pridocs",

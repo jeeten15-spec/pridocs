@@ -10,6 +10,88 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'browser-audio-video-editing-no-upload-2026',
+    title: 'Browser Audio & Video Editing (2026) — Trim, Normalize, Compress Without Upload',
+    description:
+      'Full private media toolkit: record system audio, trim MP3, remove silence, normalize, change speed, trim/compress video — all in your browser, no upload.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: [
+      'browser audio editor',
+      'online audio tools no upload',
+      'private video editor',
+      'trim mp3 no upload',
+      'compress video free',
+    ],
+  },
+  {
+    slug: 'trim-mp3-online-no-upload-free',
+    title: 'Trim MP3 Online Free — Cut Audio Without Uploading (2026)',
+    description:
+      'Cut MP3 and WAV with waveform preview and fade in/out. Free private audio trimmer — files never leave your device.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['trim mp3 online', 'cut audio no upload', 'mp3 cutter free', 'trim wav online', 'audio trimmer private'],
+  },
+  {
+    slug: 'remove-silence-from-audio-free',
+    title: 'Remove Silence from Audio Free — Cut Dead Air, No Upload',
+    description:
+      'Strip silence from podcasts and voice notes in your browser. Free truncate-silence tool — no signup, files stay local.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['remove silence from audio', 'truncate silence', 'cut silence mp3', 'podcast silence remover'],
+  },
+  {
+    slug: 'normalize-audio-volume-booster-no-upload',
+    title: 'Normalize Audio Online — Make Quiet MP3s Louder (Free, Private)',
+    description:
+      'Balance podcast levels or boost quiet recordings locally. Free audio normalizer — no upload, no watermark.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['normalize audio', 'volume booster mp3', 'make audio louder online', 'loudness normalize free'],
+  },
+  {
+    slug: 'change-audio-speed-online-free',
+    title: 'Change Audio Speed Online — Speed Up or Slow Down MP3 Free',
+    description:
+      'Speed up lectures or slow down language audio in your browser. Change tempo without pitch — private, no upload.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['change audio speed', 'speed up mp3 online', 'slow down audio', 'change tempo without pitch'],
+  },
+  {
+    slug: 'trim-video-online-no-upload',
+    title: 'Trim Video Online Free — Cut MP4 Without Uploading',
+    description:
+      'Cut and trim MP4 videos privately in your browser. Free video trimmer — no watermark, no server upload.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: ['trim video online', 'cut mp4 free', 'video trimmer no upload', 'trim video private'],
+  },
+  {
+    slug: 'compress-video-online-email-whatsapp',
+    title: 'Compress Video Online Free — Shrink MP4 for Email & WhatsApp',
+    description:
+      'Reduce MP4 file size for email and messaging. Free private video compressor — runs in your browser, no upload.',
+    date: '2026-09-16',
+    dateLabel: 'September 16, 2026',
+    category: 'Audio Tools',
+    keywords: [
+      'compress video online',
+      'reduce mp4 size',
+      'shrink video for email',
+      'video compressor no watermark',
+      'compress video for whatsapp',
+    ],
+  },
+  {
     slug: 'record-system-audio-online-wasapi-loopback',
     title: 'Record System Audio Online — Free WASAPI Loopback Alternative (2026)',
     description:

@@ -15,11 +15,25 @@ import PdfToWordNoServerArticle from '../content/blog/PdfToWordNoServerArticle'
 import PridocsVsSmallpdfAdobeArticle from '../content/blog/PridocsVsSmallpdfAdobeArticle'
 import SaferInBrowserConvertersArticle from '../content/blog/SaferInBrowserConvertersArticle'
 import RecordSystemAudioArticle from '../content/blog/RecordSystemAudioArticle'
+import BrowserAudioEditingHubArticle from '../content/blog/BrowserAudioEditingHubArticle'
+import TrimMp3NoUploadArticle from '../content/blog/TrimMp3NoUploadArticle'
+import RemoveSilenceAudioArticle from '../content/blog/RemoveSilenceAudioArticle'
+import NormalizeAudioLouderArticle from '../content/blog/NormalizeAudioLouderArticle'
+import ChangeAudioSpeedArticle from '../content/blog/ChangeAudioSpeedArticle'
+import TrimVideoNoUploadArticle from '../content/blog/TrimVideoNoUploadArticle'
+import CompressVideoEmailArticle from '../content/blog/CompressVideoEmailArticle'
 
 const SITE = 'https://pridocs.org'
 const DEFAULT_TITLE = 'Pridocs | Free, Secure & Ad-Free Document and Media Converter'
 
 const bodies: Record<string, () => React.ReactElement> = {
+  'browser-audio-video-editing-no-upload-2026': () => <BrowserAudioEditingHubArticle />,
+  'trim-mp3-online-no-upload-free': () => <TrimMp3NoUploadArticle />,
+  'remove-silence-from-audio-free': () => <RemoveSilenceAudioArticle />,
+  'normalize-audio-volume-booster-no-upload': () => <NormalizeAudioLouderArticle />,
+  'change-audio-speed-online-free': () => <ChangeAudioSpeedArticle />,
+  'trim-video-online-no-upload': () => <TrimVideoNoUploadArticle />,
+  'compress-video-online-email-whatsapp': () => <CompressVideoEmailArticle />,
   'record-system-audio-online-wasapi-loopback': () => <RecordSystemAudioArticle />,
   'compress-pdf-under-1mb-no-signup': () => <CompressPdfUnder1MbArticle />,
   'remove-background-no-signup-files-stay-on-device': () => <RemoveBgComparisonArticle />,

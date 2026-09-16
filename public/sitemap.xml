@@ -36,6 +36,41 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://pridocs.org/blog/browser-audio-video-editing-no-upload-2026</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/trim-mp3-online-no-upload-free</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/remove-silence-from-audio-free</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/normalize-audio-volume-booster-no-upload</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/change-audio-speed-online-free</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/trim-video-online-no-upload</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/blog/compress-video-online-email-whatsapp</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://pridocs.org/blog/record-system-audio-online-wasapi-loopback</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -402,6 +437,31 @@
   </url>
   <url>
     <loc>https://pridocs.org/tools/audio-trimmer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/remove-silence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/audio-normalizer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/audio-speed-changer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/video-trimmer</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pridocs.org/tools/video-compressor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
